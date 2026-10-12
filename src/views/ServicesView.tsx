@@ -781,7 +781,7 @@ export const ServicesView: React.FC = () => {
 
             <motion.div
               style={{ scaleY: stepsScaleY, originY: 0 }}
-              className="absolute left-8 md:left-1/2 -translate-x-1/2 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#0B1F3A] via-orange-500 to-[#00F5D4] shadow-[0_0_12px_#0B1F3A] rounded-full z-0 origin-top"
+              className="absolute left-8 md:left-1/2 -translate-x-1/2 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#0B1F3A] dark:from-[#00F5D4] via-[#00F5D4] dark:via-[#0B1F3A] to-[#0B1F3A] dark:to-[#00F5D4] shadow-[0_0_12px_#0B1F3A] dark:shadow-[0_0_12px_#00F5D4] rounded-full z-0 origin-top"
             />
 
             <div className="w-full space-y-16 relative z-10">

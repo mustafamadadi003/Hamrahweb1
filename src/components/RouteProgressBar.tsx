@@ -32,7 +32,7 @@ export const RouteProgressBar: React.FC = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-transparent pointer-events-none">
       <motion.div
-        className="h-full bg-gradient-to-r from-[#0B1F3A] via-[#FF9F43] to-[#00F5D4] shadow-[0_0_12px_#0B1F3A]"
+        className="h-full bg-gradient-to-r from-[#00F5D4] via-[#0B1F3A] to-[#00F5D4] shadow-[0_0_12px_#00F5D4]"
         initial={{ width: '0%' }}
         animate={{ width: `${progress}%` }}
         transition={{ duration: 0.25, ease: 'easeInOut' }}

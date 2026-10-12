@@ -415,7 +415,7 @@ export const HomeView: React.FC = () => {
         {/* BOTTOM HERO: Radial aurora gradient + Greyscale Logos Loop marquee */}
         <div className="relative w-full mt-24">
           {/* Large rising aurora gradient glow */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[320px] bg-gradient-to-t from-[#0B1F3A]/15 via-[#805AD5]/15 to-transparent rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[320px] bg-gradient-to-t from-[#0B1F3A]/15 via-[#0B1F3A]/15 to-transparent rounded-full blur-[100px] pointer-events-none" />
 
           {/* Logos Marquee strip */}
           <div className="relative w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-slate-200/30 dark:bg-[#080E1C]/40 backdrop-blur-md py-6 overflow-hidden">
@@ -448,7 +448,7 @@ export const HomeView: React.FC = () => {
             </div>
 
             {/* Glowing purple gradient line at bottom border */}
-            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#805AD5] to-transparent shadow-[0_1px_10px_#805AD5]" />
+            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#0B1F3A] to-transparent shadow-[0_1px_10px_#0B1F3A]" />
           </div>
         </div>
       </section>
@@ -482,7 +482,7 @@ export const HomeView: React.FC = () => {
               />
 
               {/* Pink/Magenta to Black gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-[#D53F8C]/10 to-transparent z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-[#0B1F3A]/10 to-transparent z-10 pointer-events-none" />
 
               {/* Left/Bottom corners faint partner text */}
               <div className="absolute bottom-6 right-6 z-20">

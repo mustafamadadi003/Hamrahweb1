@@ -212,7 +212,7 @@ export const AboutView: React.FC = () => {
             <div className="absolute md:left-1/2 left-8 -translate-x-1/2 top-4 bottom-4 w-[2px] bg-slate-300 dark:bg-slate-700/60 rounded-full z-0" />
             <motion.div
               style={{ scaleY, originY: 0 }}
-              className="absolute md:left-1/2 left-8 -translate-x-1/2 top-4 bottom-4 w-[3px] bg-gradient-to-b from-[#0B1F3A] via-orange-500 to-[#00F5D4] shadow-[0_0_12px_#0B1F3A] rounded-full z-0 origin-top"
+              className="absolute md:left-1/2 left-8 -translate-x-1/2 top-4 bottom-4 w-[3px] bg-gradient-to-b from-[#0B1F3A] dark:from-[#00F5D4] via-[#00F5D4] dark:via-[#0B1F3A] to-[#0B1F3A] dark:to-[#00F5D4] shadow-[0_0_12px_#0B1F3A] dark:shadow-[0_0_12px_#00F5D4] rounded-full z-0 origin-top"
             />
 
             <div className="w-full space-y-16">
