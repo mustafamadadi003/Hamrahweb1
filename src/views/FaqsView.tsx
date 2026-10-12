@@ -196,11 +196,11 @@ export const FaqsView: React.FC = () => {
   const currentT = localizedContent[language] || localizedContent.en;
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#2EE6D6] selection:text-[#0F2040] transition-colors duration-300 pt-20">
+    <div className="flex flex-col w-full min-h-screen bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#00F5D4] selection:text-[#0B1F3A] transition-colors duration-300 pt-20">
       
       {/* 1. HERO SPACE */}
-      <div className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden bg-gradient-to-b from-[#EFF4FF] dark:from-[#0F1A30] to-[#F8F9FF] dark:to-[#0A1224] flex items-center justify-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-gradient-to-tr from-[#FF5722]/10 to-[#2EE6D6]/10 rounded-full blur-[140px] animate-pulse" />
+      <div className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden bg-gradient-to-b from-[#EFF4FF] dark:from-[#0D2645] to-[#F8F9FF] dark:to-[#0B1F3A] flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[250px] bg-gradient-to-tr from-[#0B1F3A]/10 to-[#00F5D4]/10 rounded-full blur-[140px] animate-pulse" />
       </div>
 
       {/* 2. MAIN TWO-COLUMN LAYOUT SECTION */}
@@ -210,14 +210,14 @@ export const FaqsView: React.FC = () => {
           {/* LEFT COLUMN: STICKY CONTACT FORM CARD */}
           <div className="lg:col-span-5 w-full lg:sticky lg:top-32 self-start">
             <ScrollReveal variant="fade-up">
-              <div className="w-full max-w-[620px] mx-auto bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-3xl p-6 sm:p-9 md:p-10 shadow-2xl relative overflow-hidden group">
+              <div className="w-full max-w-[620px] mx-auto bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-3xl p-6 sm:p-9 md:p-10 shadow-2xl relative overflow-hidden group">
                 
-                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#FF5722]/10 border border-[#FF5722]/20 text-[#FF5722] text-xs font-bold mb-6">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] animate-pulse" />
+                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0B1F3A]/10 border border-[#0B1F3A]/20 text-[#0B1F3A] text-xs font-bold mb-6">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] animate-pulse" />
                   <span>{currentT.badgeResponse}</span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-black text-[#0D1C2E] dark:text-white tracking-tight leading-tight mb-8">
+                <h3 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] dark:text-white tracking-tight leading-tight mb-8">
                   {currentT.formTitle}
                 </h3>
 
@@ -225,7 +225,7 @@ export const FaqsView: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="p-6 rounded-2xl bg-[#FF5722]/10 border border-[#FF5722]/30 text-center text-[#FF5722] text-sm font-extrabold"
+                    className="p-6 rounded-2xl bg-[#0B1F3A]/10 border border-[#0B1F3A]/30 text-center text-[#0B1F3A] text-sm font-extrabold"
                   >
                     {currentT.successMsg}
                   </motion.div>
@@ -239,9 +239,9 @@ export const FaqsView: React.FC = () => {
                         value={leadForm.fullName}
                         onChange={(e) => setLeadForm({ ...leadForm, fullName: e.target.value })}
                         placeholder=" "
-                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#FF5722] transition-colors duration-300 peer"
+                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#0B1F3A] transition-colors duration-300 peer"
                       />
-                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#FF5722] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
+                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#0B1F3A] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
                         {currentT.fieldName}
                       </label>
                     </div>
@@ -253,9 +253,9 @@ export const FaqsView: React.FC = () => {
                         value={leadForm.email}
                         onChange={(e) => setLeadForm({ ...leadForm, email: e.target.value })}
                         placeholder=" "
-                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#FF5722] transition-colors duration-300 peer"
+                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#0B1F3A] transition-colors duration-300 peer"
                       />
-                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#FF5722] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
+                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#0B1F3A] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
                         {currentT.fieldEmail}
                       </label>
                     </div>
@@ -267,9 +267,9 @@ export const FaqsView: React.FC = () => {
                         value={leadForm.message}
                         onChange={(e) => setLeadForm({ ...leadForm, message: e.target.value })}
                         placeholder=" "
-                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#FF5722] transition-colors duration-300 resize-y min-h-[100px] peer"
+                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#0B1F3A] transition-colors duration-300 resize-y min-h-[100px] peer"
                       />
-                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#FF5722] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
+                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#0B1F3A] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
                         {currentT.fieldMessage}
                       </label>
                     </div>
@@ -280,7 +280,7 @@ export const FaqsView: React.FC = () => {
                         id="form-newsletter"
                         checked={leadForm.newsletter}
                         onChange={(e) => setLeadForm({ ...leadForm, newsletter: e.target.checked })}
-                        className="w-4 h-4 rounded-md border-slate-300 dark:border-white/20 bg-transparent text-[#FF5722] focus:ring-0 cursor-pointer"
+                        className="w-4 h-4 rounded-md border-slate-300 dark:border-white/20 bg-transparent text-[#0B1F3A] focus:ring-0 cursor-pointer"
                       />
                       <label htmlFor="form-newsletter" className="text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer select-none">
                         {currentT.subscribeNews}
@@ -289,11 +289,11 @@ export const FaqsView: React.FC = () => {
 
                     <button
                       type="submit"
-                      className="w-full py-4 px-6 bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] active:scale-[0.98] rounded-full transition-all duration-300 font-extrabold text-sm flex items-center justify-between group cursor-pointer shadow-xl"
+                      className="w-full py-4 px-6 bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] active:scale-[0.98] rounded-full transition-all duration-300 font-extrabold text-sm flex items-center justify-between group cursor-pointer shadow-xl"
                     >
                       <span className="font-black uppercase tracking-wider">{currentT.submitNow}</span>
                       <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:translate-x-1.5 dir-rtl:group-hover:-translate-x-1.5 shadow-md">
-                        <span className="material-symbols-outlined text-white dark:text-[#0F2040] text-sm font-black">
+                        <span className="material-symbols-outlined text-white dark:text-[#0B1F3A] text-sm font-black">
                           {isRtl ? 'arrow_back' : 'arrow_forward'}
                         </span>
                       </div>
@@ -312,10 +312,10 @@ export const FaqsView: React.FC = () => {
               
               <div className="mb-10 sm:mb-12">
                 <div className="inline-flex items-center gap-2 mb-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722]" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#FF5722]">{currentT.faqEyebrow}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A]" />
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#0B1F3A]">{currentT.faqEyebrow}</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0D1C2E] dark:text-white tracking-tight leading-none">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0B1F3A] dark:text-white tracking-tight leading-none">
                   {currentT.faqTitle}
                 </h2>
               </div>
@@ -328,7 +328,7 @@ export const FaqsView: React.FC = () => {
                       key={item.id}
                       className={`w-full text-left transition-all duration-300 pb-2 border-b ${
                         isOpen 
-                          ? 'border-b-[#FF5722]' 
+                          ? 'border-b-[#0B1F3A]' 
                           : 'border-b-slate-200 dark:border-white/10 hover:border-b-slate-300 dark:hover:border-white/20'
                       }`}
                     >
@@ -338,13 +338,13 @@ export const FaqsView: React.FC = () => {
                       >
                         <div className="flex items-center gap-4 sm:gap-6">
                           <span className={`font-mono text-xs font-extrabold tracking-wider transition-colors duration-300 ${
-                            isOpen ? 'text-[#FF5722]' : 'text-slate-400 dark:text-white/30'
+                            isOpen ? 'text-[#0B1F3A]' : 'text-slate-400 dark:text-white/30'
                           }`}>
                             {formatLocalizedDigits(item.id, language)}
                           </span>
                           
                           <span className={`text-base sm:text-lg font-black tracking-tight leading-snug transition-colors duration-300 ${
-                            isOpen ? 'text-[#0D1C2E] dark:text-white' : 'text-slate-700 dark:text-white/80 group-hover:text-[#0D1C2E] dark:group-hover:text-white'
+                            isOpen ? 'text-[#0B1F3A] dark:text-white' : 'text-slate-700 dark:text-white/80 group-hover:text-[#0B1F3A] dark:group-hover:text-white'
                           }`}>
                             {item.q}
                           </span>
@@ -352,7 +352,7 @@ export const FaqsView: React.FC = () => {
 
                         <div className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
                           isOpen 
-                            ? 'bg-[#FF5722] border-[#FF5722] text-white rotate-90' 
+                            ? 'bg-[#0B1F3A] border-[#0B1F3A] text-white rotate-90' 
                             : 'border-slate-300 dark:border-white/20 text-slate-500 dark:text-white/50 group-hover:border-slate-400 dark:group-hover:border-white/40'
                         }`}>
                           <span className="material-symbols-outlined text-sm font-bold">

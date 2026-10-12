@@ -19,17 +19,17 @@ const formatLocalizedNumber = (num: number, lang: string) => {
 
 // Custom 3D glowing blue line-art SVGs for Services
 const BrandIcon3D: React.FC = () => (
-  <svg className="w-14 h-14 text-[#2EE6D6] drop-shadow-[0_0_15px_rgba(46,230,214,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <svg className="w-14 h-14 text-[#00F5D4] drop-shadow-[0_0_15px_rgba(46,230,214,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
     <path d="M24 4L6 13L24 22L42 13L24 4Z" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M6 13V35L24 44V22L6 13Z" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M42 13V35L24 44V22L42 13Z" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M24 14L15 18.5L24 23L33 18.5L24 14Z" fill="currentColor" fillOpacity="0.1" />
-    <circle cx="24" cy="22" r="3" fill="#2EE6D6" className="animate-pulse" />
+    <circle cx="24" cy="22" r="3" fill="#00F5D4" className="animate-pulse" />
   </svg>
 );
 
 const WebIcon3D: React.FC = () => (
-  <svg className="w-14 h-14 text-[#2EE6D6] drop-shadow-[0_0_15px_rgba(46,230,214,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <svg className="w-14 h-14 text-[#00F5D4] drop-shadow-[0_0_15px_rgba(46,230,214,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
     <rect x="4" y="6" width="40" height="32" rx="4" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M4 14H44" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="8" cy="10" r="1.5" fill="currentColor" />
@@ -554,9 +554,9 @@ const servicesContent = {
 };
 
 const SectionDivider: React.FC = () => (
-  <div className="relative w-full py-4 flex items-center justify-center bg-[#F8F9FF] dark:bg-[#0A1224]">
+  <div className="relative w-full py-4 flex items-center justify-center bg-[#F8F9FF] dark:bg-[#0B1F3A]">
     <div className="w-full max-w-[1100px] h-[1px] bg-slate-300 dark:bg-white/10 relative">
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#FF5722] shadow-[0_0_10px_#FF5722]" />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#0B1F3A] shadow-[0_0_10px_#0B1F3A]" />
     </div>
   </div>
 );
@@ -590,24 +590,24 @@ export const ServicesView: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#2EE6D6] selection:text-[#0F2040] transition-colors duration-300 pt-20">
+    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#00F5D4] selection:text-[#0B1F3A] transition-colors duration-300 pt-20">
       
       {/* 1. SERVICES TABS SECTION ("Our Services") */}
-      <section className="relative w-full py-24 sm:py-32 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0F1A30]">
+      <section className="relative w-full py-24 sm:py-32 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0D2645]">
         
         <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-12 left-1/4 w-[280px] h-[280px] bg-[#FF5722]/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-12 left-1/4 w-[280px] h-[280px] bg-[#0B1F3A]/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1200px] mx-auto">
           
           <ScrollReveal variant="fade-up" className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div className="flex items-center gap-2 mb-2 md:mb-0">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {curContent.ourServices}
               </span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-black text-[#0D1C2E] dark:text-white tracking-tight leading-tight max-w-2xl text-wrap">
+            <h1 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] dark:text-white tracking-tight leading-tight max-w-2xl text-wrap">
               {curContent.introTitle}
             </h1>
           </ScrollReveal>
@@ -615,13 +615,13 @@ export const ServicesView: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
             {/* LEFT COLUMN */}
-            <div className="lg:col-span-5 flex flex-col relative bg-white/60 dark:bg-[#111C33]/60 backdrop-blur-md rounded-3xl border border-[#DCE9FF] dark:border-white/5 p-6 shadow-xl">
+            <div className="lg:col-span-5 flex flex-col relative bg-white/60 dark:bg-[#0B1F3A]/60 backdrop-blur-md rounded-3xl border border-[#DCE9FF] dark:border-white/5 p-6 shadow-xl">
               
               <div className="hidden md:block relative pl-6 dir-rtl:pl-0 dir-rtl:pr-6 max-h-[460px] overflow-y-auto scrollbar-none pr-2">
                 <div className="absolute left-[3px] dir-rtl:left-auto dir-rtl:right-[3px] top-0 bottom-0 w-[2px] bg-slate-200 dark:bg-slate-700/60" />
                 
                 <div 
-                  className="absolute left-[3px] dir-rtl:left-auto dir-rtl:right-[3px] w-[2px] bg-[#2EE6D6] shadow-[0_0_10px_#2EE6D6] transition-all duration-300"
+                  className="absolute left-[3px] dir-rtl:left-auto dir-rtl:right-[3px] w-[2px] bg-[#00F5D4] shadow-[0_0_10px_#00F5D4] transition-all duration-300"
                   style={{
                     height: '56px',
                     transform: `translateY(${activeTabIdx * 76 + 10}px)`
@@ -637,12 +637,12 @@ export const ServicesView: React.FC = () => {
                         onClick={() => setActiveTabIdx(index)}
                         className={`w-full text-left dir-rtl:text-right p-4 rounded-xl transition-all duration-300 flex items-center gap-4 cursor-pointer relative group ${
                           isActive
-                            ? 'bg-white dark:bg-[#0F1A30] border border-[#DCE9FF] dark:border-white/10 text-[#0D1C2E] dark:text-white font-extrabold shadow-md scale-[1.01]'
-                            : 'bg-transparent text-slate-600 dark:text-slate-400 hover:text-[#0D1C2E] dark:hover:text-white hover:bg-white/40 dark:hover:bg-white/5'
+                            ? 'bg-white dark:bg-[#0D2645] border border-[#DCE9FF] dark:border-white/10 text-[#0B1F3A] dark:text-white font-extrabold shadow-md scale-[1.01]'
+                            : 'bg-transparent text-slate-600 dark:text-slate-400 hover:text-[#0B1F3A] dark:hover:text-white hover:bg-white/40 dark:hover:bg-white/5'
                         }`}
                         style={{ height: '64px' }}
                       >
-                        <span className={`text-xs font-mono font-bold transition-colors ${isActive ? 'text-[#2EE6D6]' : 'text-slate-500'}`}>
+                        <span className={`text-xs font-mono font-bold transition-colors ${isActive ? 'text-[#00F5D4]' : 'text-slate-500'}`}>
                           {service.number}
                         </span>
                         <span className="text-sm font-bold tracking-tight truncate">
@@ -664,8 +664,8 @@ export const ServicesView: React.FC = () => {
                       onClick={() => setActiveTabIdx(index)}
                       className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-extrabold transition-all border shrink-0 ${
                         isActive
-                          ? 'bg-[#0F2040] dark:bg-[#2EE6D6] text-white dark:text-[#0F2040] border-transparent shadow-lg'
-                          : 'bg-white dark:bg-[#111C33] text-slate-600 dark:text-slate-400 border-[#DCE9FF] dark:border-white/10 hover:text-white'
+                          ? 'bg-[#0B1F3A] dark:bg-[#00F5D4] text-white dark:text-[#0B1F3A] border-transparent shadow-lg'
+                          : 'bg-white dark:bg-[#0B1F3A] text-slate-600 dark:text-slate-400 border-[#DCE9FF] dark:border-white/10 hover:text-white'
                       }`}
                     >
                       <span className="font-mono">{service.number}</span>
@@ -686,15 +686,15 @@ export const ServicesView: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: isRtl ? 20 : -20 }}
                   transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-[#22304A] rounded-3xl p-8 sm:p-10 flex flex-col justify-between h-full relative overflow-hidden group shadow-2xl"
+                  className="bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-[#22304A] rounded-3xl p-8 sm:p-10 flex flex-col justify-between h-full relative overflow-hidden group shadow-2xl"
                 >
                   
-                  <div className="absolute -top-12 -left-12 w-48 h-48 bg-[#2EE6D6]/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute -top-12 -left-12 w-48 h-48 bg-[#00F5D4]/10 rounded-full blur-3xl pointer-events-none" />
                   
                   <div className="space-y-8 relative z-10">
                     
                     <div className="flex items-center justify-between">
-                      <div className="p-4 bg-slate-50 dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 rounded-2xl flex items-center justify-center text-[#2EE6D6]">
+                      <div className="p-4 bg-slate-50 dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 rounded-2xl flex items-center justify-center text-[#00F5D4]">
                         <ActiveIcon />
                       </div>
                       <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase">
@@ -703,11 +703,11 @@ export const ServicesView: React.FC = () => {
                     </div>
 
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-black text-[#0D1C2E] dark:text-white mb-4">
+                      <h3 className="text-xl sm:text-2xl font-black text-[#0B1F3A] dark:text-white mb-4">
                         {activeService.name}
                       </h3>
                       <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-light">
-                        <strong className="font-black text-[#0D1C2E] dark:text-white">{activeService.boldPhrase}</strong> {activeService.desc}
+                        <strong className="font-black text-[#0B1F3A] dark:text-white">{activeService.boldPhrase}</strong> {activeService.desc}
                       </p>
                     </div>
 
@@ -716,9 +716,9 @@ export const ServicesView: React.FC = () => {
                         {activeService.tags.map((tag, idx) => (
                           <React.Fragment key={tag}>
                             {idx > 0 && (
-                              <span className="text-[#2EE6D6] opacity-80 font-black text-[10px]">✦</span>
+                              <span className="text-[#00F5D4] opacity-80 font-black text-[10px]">✦</span>
                             )}
-                            <span className="font-bold tracking-wide hover:text-[#0D1C2E] dark:hover:text-white transition-colors">{tag}</span>
+                            <span className="font-bold tracking-wide hover:text-[#0B1F3A] dark:hover:text-white transition-colors">{tag}</span>
                           </React.Fragment>
                         ))}
                       </div>
@@ -729,7 +729,7 @@ export const ServicesView: React.FC = () => {
                   <div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/5 flex items-center justify-between relative z-10">
                     <button
                       onClick={openConsultationModal}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] font-extrabold text-xs transition duration-300 shadow-lg cursor-pointer transform hover:scale-[1.02] active:scale-[0.98]"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] font-extrabold text-xs transition duration-300 shadow-lg cursor-pointer transform hover:scale-[1.02] active:scale-[0.98]"
                     >
                       <span className="material-symbols-outlined text-[10px] bg-white/20 rounded-full p-1 flex items-center justify-center font-black">
                         arrow_outward
@@ -754,20 +754,20 @@ export const ServicesView: React.FC = () => {
       <SectionDivider />
 
       {/* 2. STEPS SECTION */}
-      <section className="relative w-full py-28 px-6 lg:px-12 bg-[#F8F9FF] dark:bg-[#0A1224]">
+      <section className="relative w-full py-28 px-6 lg:px-12 bg-[#F8F9FF] dark:bg-[#0B1F3A]">
         
-        <div className="absolute top-1/4 left-10 w-[200px] h-[200px] bg-[#FF5722]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 left-10 w-[200px] h-[200px] bg-[#0B1F3A]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-[1200px] mx-auto flex flex-col items-center">
           
           <ScrollReveal variant="fade-up" className="text-center max-w-2xl mb-20">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {curContent.stepsEyebrow}
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-[#0D1C2E] dark:text-white tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] dark:text-white tracking-tight mb-4">
               {curContent.stepsTitle}
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
@@ -781,7 +781,7 @@ export const ServicesView: React.FC = () => {
 
             <motion.div
               style={{ scaleY: stepsScaleY, originY: 0 }}
-              className="absolute left-8 md:left-1/2 -translate-x-1/2 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#FF5722] via-orange-500 to-[#2EE6D6] shadow-[0_0_12px_#FF5722] rounded-full z-0 origin-top"
+              className="absolute left-8 md:left-1/2 -translate-x-1/2 top-8 bottom-8 w-[2px] bg-gradient-to-b from-[#0B1F3A] via-orange-500 to-[#00F5D4] shadow-[0_0_12px_#0B1F3A] rounded-full z-0 origin-top"
             />
 
             <div className="w-full space-y-16 relative z-10">
@@ -801,20 +801,20 @@ export const ServicesView: React.FC = () => {
                         className="group"
                       >
                         <motion.div
-                          whileInView={{ borderColor: "#FF5722", boxShadow: "0 0 25px rgba(255, 87, 34, 0.12)" }}
+                          whileInView={{ borderColor: "#0B1F3A", boxShadow: "0 0 25px rgba(255, 87, 34, 0.12)" }}
                           viewport={{ once: false, amount: 0.6 }}
                           transition={{ duration: 0.4 }}
-                          className="bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 p-6 sm:p-8 rounded-3xl relative transition-colors duration-300 shadow-xl"
+                          className="bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 p-6 sm:p-8 rounded-3xl relative transition-colors duration-300 shadow-xl"
                         >
-                          <div className={`absolute top-4 ${isRtl ? 'left-4' : 'right-4'} bg-slate-100 dark:bg-black/50 text-[10px] font-extrabold px-3 py-1 rounded-full text-[#FF5722] border border-[#FF5722]/20 shadow-sm uppercase`}>
+                          <div className={`absolute top-4 ${isRtl ? 'left-4' : 'right-4'} bg-slate-100 dark:bg-black/50 text-[10px] font-extrabold px-3 py-1 rounded-full text-[#0B1F3A] border border-[#0B1F3A]/20 shadow-sm uppercase`}>
                             {stepItem.duration}
                           </div>
 
-                          <span className="text-[10px] font-mono font-black text-[#FF5722] tracking-wider block mb-2">
+                          <span className="text-[10px] font-mono font-black text-[#0B1F3A] tracking-wider block mb-2">
                             {stepItem.stepNum} {stepItem.phase}
                           </span>
                           
-                          <h3 className="text-base sm:text-lg font-black text-[#0D1C2E] dark:text-white mb-2 group-hover:text-[#FF5722] transition-colors">
+                          <h3 className="text-base sm:text-lg font-black text-[#0B1F3A] dark:text-white mb-2 group-hover:text-[#0B1F3A] transition-colors">
                             {stepItem.subtitle}
                           </h3>
                           
@@ -825,11 +825,11 @@ export const ServicesView: React.FC = () => {
                       </ScrollReveal>
                     </div>
 
-                    <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-[#0F2040] border-2 border-[#FF5722] text-white font-mono text-xs flex items-center justify-center font-black z-20 shadow-lg">
+                    <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white dark:bg-[#0B1F3A] border-2 border-[#0B1F3A] text-white font-mono text-xs flex items-center justify-center font-black z-20 shadow-lg">
                       <motion.div
-                        whileInView={{ backgroundColor: "#FF5722", scale: 1.1, boxShadow: "0 0 12px #FF5722" }}
+                        whileInView={{ backgroundColor: "#0B1F3A", scale: 1.1, boxShadow: "0 0 12px #0B1F3A" }}
                         viewport={{ once: false, amount: 0.5 }}
-                        className="w-4 h-4 rounded-full bg-[#FF5722]"
+                        className="w-4 h-4 rounded-full bg-[#0B1F3A]"
                       />
                     </div>
 
@@ -850,19 +850,19 @@ export const ServicesView: React.FC = () => {
       <SectionDivider />
 
       {/* 3. PORTFOLIO SHOWCASE */}
-      <section className="relative w-full py-28 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0F1A30]">
+      <section className="relative w-full py-28 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0D2645]">
         
         <div className="max-w-[1200px] mx-auto">
           
           <ScrollReveal variant="fade-up" className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                   {curContent.portfolioEyebrow}
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-black text-[#0D1C2E] dark:text-white tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] dark:text-white tracking-tight mb-4">
                 {curContent.portfolioTitle}
               </h2>
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-lg">
@@ -873,7 +873,7 @@ export const ServicesView: React.FC = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => scrollPortfolio('left')}
-                className="w-12 h-12 rounded-full border border-slate-300 dark:border-white/10 hover:border-[#FF5722] hover:text-[#FF5722] bg-white dark:bg-[#111C33] text-[#0D1C2E] dark:text-white flex items-center justify-center transition-all cursor-pointer shadow-md transform active:scale-95"
+                className="w-12 h-12 rounded-full border border-slate-300 dark:border-white/10 hover:border-[#0B1F3A] hover:text-[#0B1F3A] bg-white dark:bg-[#0B1F3A] text-[#0B1F3A] dark:text-white flex items-center justify-center transition-all cursor-pointer shadow-md transform active:scale-95"
                 aria-label="Scroll left"
               >
                 <span className="material-symbols-outlined text-lg">
@@ -882,7 +882,7 @@ export const ServicesView: React.FC = () => {
               </button>
               <button
                 onClick={() => scrollPortfolio('right')}
-                className="w-12 h-12 rounded-full border border-slate-300 dark:border-white/10 hover:border-[#FF5722] hover:text-[#FF5722] bg-white dark:bg-[#111C33] text-[#0D1C2E] dark:text-white flex items-center justify-center transition-all cursor-pointer shadow-md transform active:scale-95"
+                className="w-12 h-12 rounded-full border border-slate-300 dark:border-white/10 hover:border-[#0B1F3A] hover:text-[#0B1F3A] bg-white dark:bg-[#0B1F3A] text-[#0B1F3A] dark:text-white flex items-center justify-center transition-all cursor-pointer shadow-md transform active:scale-95"
                 aria-label="Scroll right"
               >
                 <span className="material-symbols-outlined text-lg">
@@ -900,7 +900,7 @@ export const ServicesView: React.FC = () => {
             {curContent.portfolioCases.map((project, idx) => (
               <div 
                 key={idx}
-                className="w-[320px] sm:w-[360px] shrink-0 snap-start bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-3xl overflow-hidden flex flex-col justify-between group shadow-xl transition duration-300"
+                className="w-[320px] sm:w-[360px] shrink-0 snap-start bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-3xl overflow-hidden flex flex-col justify-between group shadow-xl transition duration-300"
               >
                 <div className="h-52 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-900">
                   <img
@@ -914,7 +914,7 @@ export const ServicesView: React.FC = () => {
                     {project.watermark}
                   </div>
 
-                  <div className={`absolute bottom-4 ${isRtl ? 'left-4' : 'right-4'} bg-[#FF5722] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md`}>
+                  <div className={`absolute bottom-4 ${isRtl ? 'left-4' : 'right-4'} bg-[#0B1F3A] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md`}>
                     {project.badge}
                   </div>
                 </div>
@@ -924,7 +924,7 @@ export const ServicesView: React.FC = () => {
                     <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-extrabold block mb-1">
                       {project.subtitle}
                     </span>
-                    <h3 className="text-lg sm:text-xl font-black text-[#0D1C2E] dark:text-white mb-4 group-hover:text-[#FF5722] transition-colors">
+                    <h3 className="text-lg sm:text-xl font-black text-[#0B1F3A] dark:text-white mb-4 group-hover:text-[#0B1F3A] transition-colors">
                       {project.title}
                     </h3>
                     
@@ -941,7 +941,7 @@ export const ServicesView: React.FC = () => {
                   <div className="pt-4 border-t border-slate-200 dark:border-white/5 flex items-center justify-between">
                     <button
                       onClick={openConsultationModal}
-                      className="inline-flex items-center gap-2 text-xs font-black text-[#FF5722] hover:underline cursor-pointer group/btn"
+                      className="inline-flex items-center gap-2 text-xs font-black text-[#0B1F3A] hover:underline cursor-pointer group/btn"
                     >
                       <span>{curContent.portfolioCaseBtn}</span>
                       <span className="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">
@@ -961,26 +961,26 @@ export const ServicesView: React.FC = () => {
       <SectionDivider />
 
       {/* 4. LATEST INSIGHTS */}
-      <section className="relative w-full py-28 px-6 lg:px-12 bg-[#F8F9FF] dark:bg-[#0A1224]">
+      <section className="relative w-full py-28 px-6 lg:px-12 bg-[#F8F9FF] dark:bg-[#0B1F3A]">
         
         <div className="max-w-[1200px] mx-auto">
           
           <ScrollReveal variant="fade-up" className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                   {curContent.insightsEyebrow}
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-black text-[#0D1C2E] dark:text-white tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-black text-[#0B1F3A] dark:text-white tracking-tight">
                 {curContent.insightsTitle}
               </h2>
             </div>
 
             <button
               onClick={openConsultationModal}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-[#111C33] border border-slate-300 dark:border-white/10 hover:border-[#FF5722] hover:text-[#FF5722] text-[#0D1C2E] dark:text-white font-extrabold text-xs transition self-start md:self-auto shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white dark:bg-[#0B1F3A] border border-slate-300 dark:border-white/10 hover:border-[#0B1F3A] hover:text-[#0B1F3A] text-[#0B1F3A] dark:text-white font-extrabold text-xs transition self-start md:self-auto shadow-md"
             >
               <span>{curContent.viewAllBtn}</span>
               <span className="material-symbols-outlined text-xs">
@@ -993,7 +993,7 @@ export const ServicesView: React.FC = () => {
             {curContent.insightsList.map((article, idx) => (
               <StaggerItem 
                 key={idx}
-                className="rounded-3xl bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 overflow-hidden flex flex-col justify-between group shadow-xl transition duration-300"
+                className="rounded-3xl bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 overflow-hidden flex flex-col justify-between group shadow-xl transition duration-300"
               >
                 <div>
                   <div className="h-48 w-full relative overflow-hidden bg-slate-200 dark:bg-neutral-900">
@@ -1004,7 +1004,7 @@ export const ServicesView: React.FC = () => {
                       referrerPolicy="no-referrer"
                     />
                     
-                    <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[9px] font-mono font-black text-[#FF5722] tracking-wider px-2.5 py-1 rounded-md uppercase border border-white/5">
+                    <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[9px] font-mono font-black text-[#0B1F3A] tracking-wider px-2.5 py-1 rounded-md uppercase border border-white/5">
                       {article.category}
                     </span>
                   </div>
@@ -1013,7 +1013,7 @@ export const ServicesView: React.FC = () => {
                     <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400 font-extrabold block mb-2">
                       {article.date}
                     </span>
-                    <h3 className="text-base sm:text-lg font-black text-[#0D1C2E] dark:text-white mb-3 leading-snug group-hover:text-[#FF5722] transition-colors">
+                    <h3 className="text-base sm:text-lg font-black text-[#0B1F3A] dark:text-white mb-3 leading-snug group-hover:text-[#0B1F3A] transition-colors">
                       {article.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-light line-clamp-3">
@@ -1025,10 +1025,10 @@ export const ServicesView: React.FC = () => {
                 <div className="px-6 pb-6 pt-2">
                   <button
                     onClick={openConsultationModal}
-                    className="inline-flex items-center gap-2 text-xs font-black text-slate-600 dark:text-slate-300 hover:text-[#FF5722] transition-colors cursor-pointer group/item"
+                    className="inline-flex items-center gap-2 text-xs font-black text-slate-600 dark:text-slate-300 hover:text-[#0B1F3A] transition-colors cursor-pointer group/item"
                   >
                     <span>{curContent.readMore}</span>
-                    <span className="material-symbols-outlined text-sm transform transition-transform group-hover/item:rotate-45 text-[#FF5722]">
+                    <span className="material-symbols-outlined text-sm transform transition-transform group-hover/item:rotate-45 text-[#0B1F3A]">
                       arrow_outward
                     </span>
                   </button>

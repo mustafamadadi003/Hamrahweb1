@@ -72,10 +72,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setThemeState(mode);
     if (mode === 'dark') {
       document.documentElement.classList.add('dark');
-      document.body.className = 'bg-[#0A1224] text-[#F3F4F6] antialiased transition-colors duration-500';
+      document.body.className = 'bg-[#0B1F3A] text-[#F3F4F6] antialiased transition-colors duration-500';
     } else {
       document.documentElement.classList.remove('dark');
-      document.body.className = 'bg-[#F8F9FF] text-[#0D1C2E] antialiased transition-colors duration-500';
+      document.body.className = 'bg-[#F8F9FF] text-[#0B1F3A] antialiased transition-colors duration-500';
     }
 
     setTimeout(() => {

@@ -254,10 +254,10 @@ export const ContactView: React.FC = () => {
   const currentT = localizedContent[language] || localizedContent.en;
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#2EE6D6] selection:text-[#0F2040] transition-colors duration-300 pt-20">
+    <div className="flex flex-col w-full min-h-screen bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#00F5D4] selection:text-[#0B1F3A] transition-colors duration-300 pt-20">
       
       {/* 1. HEADER SECTION */}
-      <section className="relative w-full bg-[#EFF4FF] dark:bg-[#0F1A30] pt-16 pb-24 px-4 sm:px-6 md:px-8 lg:px-12 z-20 overflow-hidden">
+      <section className="relative w-full bg-[#EFF4FF] dark:bg-[#0D2645] pt-16 pb-24 px-4 sm:px-6 md:px-8 lg:px-12 z-20 overflow-hidden">
         
         <div className="absolute top-0 left-1/3 w-[600px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(46,230,214,0.1)_0%,transparent_75%)] filter blur-3xl pointer-events-none" />
 
@@ -268,19 +268,19 @@ export const ContactView: React.FC = () => {
               
               <div className="flex flex-col gap-4 max-w-3xl">
                 <div className="inline-flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722]" />
-                  <span className="text-xs font-black uppercase tracking-widest text-[#FF5722]">{currentT.eyebrow}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A]" />
+                  <span className="text-xs font-black uppercase tracking-widest text-[#0B1F3A]">{currentT.eyebrow}</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-black text-[#0D1C2E] dark:text-white tracking-tight leading-[1.1]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-black text-[#0B1F3A] dark:text-white tracking-tight leading-[1.1]">
                   {currentT.titleH1}
                 </h1>
               </div>
 
               <div className="self-start lg:self-center shrink-0">
-                <div className="inline-flex items-center gap-3 px-4.5 py-2.5 rounded-full bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 shadow-lg">
+                <div className="inline-flex items-center gap-3 px-4.5 py-2.5 rounded-full bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 shadow-lg">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2EE6D6] opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2EE6D6]" />
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00F5D4] opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00F5D4]" />
                   </span>
                   <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-700 dark:text-white/80">{currentT.statusLive}</span>
                 </div>
@@ -293,7 +293,7 @@ export const ContactView: React.FC = () => {
             <div
               ref={panelRef}
               onMouseMove={handleMouseMove}
-              className="relative w-full max-w-[1100px] mx-auto bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl overflow-hidden group transition-all duration-300"
+              className="relative w-full max-w-[1100px] mx-auto bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl overflow-hidden group transition-all duration-300"
             >
               
               <div
@@ -306,35 +306,35 @@ export const ContactView: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12 relative z-10">
                 
                 <div className="flex flex-col gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#2EE6D6] shrink-0 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#00F5D4] shrink-0 shadow-sm">
                     <span className="material-symbols-outlined text-xl">location_on</span>
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500">{currentT.col1Title}</span>
-                    <span className="text-lg sm:text-xl font-black text-[#0D1C2E] dark:text-white leading-tight tracking-tight mt-1">{currentT.col1Val}</span>
+                    <span className="text-lg sm:text-xl font-black text-[#0B1F3A] dark:text-white leading-tight tracking-tight mt-1">{currentT.col1Val}</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#2EE6D6] shrink-0 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#00F5D4] shrink-0 shadow-sm">
                     <span className="material-symbols-outlined text-xl">headset</span>
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500">{currentT.col2Title}</span>
-                    <div className="flex flex-col text-lg sm:text-xl font-black text-[#0D1C2E] dark:text-white leading-tight tracking-tight mt-1 gap-1">
+                    <div className="flex flex-col text-lg sm:text-xl font-black text-[#0B1F3A] dark:text-white leading-tight tracking-tight mt-1 gap-1">
                       <span>{currentT.col2Phone}</span>
-                      <span className="text-slate-500 dark:text-slate-400 hover:text-[#2EE6D6] text-sm font-semibold transition-colors mt-0.5">{currentT.col2Mail}</span>
+                      <span className="text-slate-500 dark:text-slate-400 hover:text-[#00F5D4] text-sm font-semibold transition-colors mt-0.5">{currentT.col2Mail}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#2EE6D6] shrink-0 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#00F5D4] shrink-0 shadow-sm">
                     <span className="material-symbols-outlined text-xl">watch_later</span>
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500">{currentT.col3Title}</span>
-                    <span className="text-lg sm:text-xl font-black text-[#0D1C2E] dark:text-white leading-tight tracking-tight mt-1">{currentT.col3Val}</span>
+                    <span className="text-lg sm:text-xl font-black text-[#0B1F3A] dark:text-white leading-tight tracking-tight mt-1">{currentT.col3Val}</span>
                   </div>
                 </div>
 
@@ -352,14 +352,14 @@ export const ContactView: React.FC = () => {
           
           <div className="lg:col-span-5 w-full lg:sticky lg:top-32 self-start">
             <ScrollReveal variant="fade-up">
-              <div className="w-full max-w-[620px] mx-auto bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-3xl p-6 sm:p-9 md:p-10 shadow-2xl relative overflow-hidden group">
+              <div className="w-full max-w-[620px] mx-auto bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-3xl p-6 sm:p-9 md:p-10 shadow-2xl relative overflow-hidden group">
                 
-                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#FF5722]/10 border border-[#FF5722]/20 text-[#FF5722] text-xs font-bold mb-6">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] animate-pulse" />
+                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0B1F3A]/10 border border-[#0B1F3A]/20 text-[#0B1F3A] text-xs font-bold mb-6">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] animate-pulse" />
                   <span>{currentT.responseBadge}</span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-black text-[#0D1C2E] dark:text-white tracking-tight leading-tight mb-8">
+                <h3 className="text-2xl sm:text-3xl font-black text-[#0B1F3A] dark:text-white tracking-tight leading-tight mb-8">
                   {currentT.formTitle}
                 </h3>
 
@@ -367,7 +367,7 @@ export const ContactView: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="p-6 rounded-2xl bg-[#FF5722]/10 border border-[#FF5722]/30 text-center text-[#FF5722] text-sm font-extrabold"
+                    className="p-6 rounded-2xl bg-[#0B1F3A]/10 border border-[#0B1F3A]/30 text-center text-[#0B1F3A] text-sm font-extrabold"
                   >
                     {currentT.successMsg}
                   </motion.div>
@@ -381,9 +381,9 @@ export const ContactView: React.FC = () => {
                         value={leadForm.fullName}
                         onChange={(e) => setLeadForm({ ...leadForm, fullName: e.target.value })}
                         placeholder=" "
-                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#FF5722] transition-colors duration-300 peer"
+                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#0B1F3A] transition-colors duration-300 peer"
                       />
-                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#FF5722] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
+                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#0B1F3A] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
                         {currentT.fieldName}
                       </label>
                     </div>
@@ -395,9 +395,9 @@ export const ContactView: React.FC = () => {
                         value={leadForm.email}
                         onChange={(e) => setLeadForm({ ...leadForm, email: e.target.value })}
                         placeholder=" "
-                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#FF5722] transition-colors duration-300 peer"
+                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#0B1F3A] transition-colors duration-300 peer"
                       />
-                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#FF5722] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
+                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#0B1F3A] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
                         {currentT.fieldEmail}
                       </label>
                     </div>
@@ -409,9 +409,9 @@ export const ContactView: React.FC = () => {
                         value={leadForm.message}
                         onChange={(e) => setLeadForm({ ...leadForm, message: e.target.value })}
                         placeholder=" "
-                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#FF5722] transition-colors duration-300 resize-y min-h-[100px] peer"
+                        className="w-full bg-transparent border-b border-slate-300 dark:border-white/10 py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#0B1F3A] transition-colors duration-300 resize-y min-h-[100px] peer"
                       />
-                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#FF5722] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
+                      <label className="absolute top-3 left-0 text-xs text-slate-500 dark:text-white/40 tracking-wider uppercase pointer-events-none transition-all duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:top-[-12px] peer-focus:text-xs peer-focus:text-[#0B1F3A] peer-[:not(:placeholder-shown)]:top-[-12px] peer-[:not(:placeholder-shown)]:text-xs">
                         {currentT.fieldMessage}
                       </label>
                     </div>
@@ -422,7 +422,7 @@ export const ContactView: React.FC = () => {
                         id="contact-form-newsletter"
                         checked={leadForm.newsletter}
                         onChange={(e) => setLeadForm({ ...leadForm, newsletter: e.target.checked })}
-                        className="w-4 h-4 rounded-md border-slate-300 dark:border-white/20 bg-transparent text-[#FF5722] focus:ring-0 cursor-pointer"
+                        className="w-4 h-4 rounded-md border-slate-300 dark:border-white/20 bg-transparent text-[#0B1F3A] focus:ring-0 cursor-pointer"
                       />
                       <label htmlFor="contact-form-newsletter" className="text-xs text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer select-none">
                         {currentT.subscribeNews}
@@ -431,11 +431,11 @@ export const ContactView: React.FC = () => {
 
                     <button
                       type="submit"
-                      className="w-full py-4 px-6 bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] active:scale-[0.98] rounded-full transition-all duration-300 font-extrabold text-sm flex items-center justify-between group cursor-pointer shadow-xl"
+                      className="w-full py-4 px-6 bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] active:scale-[0.98] rounded-full transition-all duration-300 font-extrabold text-sm flex items-center justify-between group cursor-pointer shadow-xl"
                     >
                       <span className="font-black uppercase tracking-wider">{currentT.submitNow}</span>
                       <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:translate-x-1.5 dir-rtl:group-hover:-translate-x-1.5 shadow-md">
-                        <span className="material-symbols-outlined text-white dark:text-[#0F2040] text-sm font-black">
+                        <span className="material-symbols-outlined text-white dark:text-[#0B1F3A] text-sm font-black">
                           {isRtl ? 'arrow_back' : 'arrow_forward'}
                         </span>
                       </div>
@@ -452,11 +452,11 @@ export const ContactView: React.FC = () => {
             <ScrollReveal variant="fade-up">
               
               <div className="mb-10 sm:mb-12">
-                <div className="inline-flex items-center gap-2 mb-3 px-3.5 py-1 bg-[#FF5722]/10 border border-[#FF5722]/20 rounded-full">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF5722]" />
-                  <span className="text-[10px] font-black uppercase tracking-widest text-[#FF5722]">{currentT.faqEyebrow}</span>
+                <div className="inline-flex items-center gap-2 mb-3 px-3.5 py-1 bg-[#0B1F3A]/10 border border-[#0B1F3A]/20 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0B1F3A]" />
+                  <span className="text-[10px] font-black uppercase tracking-widest text-[#0B1F3A]">{currentT.faqEyebrow}</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0D1C2E] dark:text-white tracking-tight leading-none">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0B1F3A] dark:text-white tracking-tight leading-none">
                   {currentT.faqTitle}
                 </h2>
               </div>
@@ -469,7 +469,7 @@ export const ContactView: React.FC = () => {
                       key={item.id}
                       className={`w-full text-left transition-all duration-300 pb-2 border-b ${
                         isOpen 
-                          ? 'border-b-[#FF5722]' 
+                          ? 'border-b-[#0B1F3A]' 
                           : 'border-b-slate-200 dark:border-white/10 hover:border-b-slate-300 dark:hover:border-white/20'
                       }`}
                     >
@@ -479,13 +479,13 @@ export const ContactView: React.FC = () => {
                       >
                         <div className="flex items-center gap-4 sm:gap-6">
                           <span className={`font-mono text-xs font-extrabold tracking-wider transition-colors duration-300 ${
-                            isOpen ? 'text-[#FF5722]' : 'text-slate-400 dark:text-white/30'
+                            isOpen ? 'text-[#0B1F3A]' : 'text-slate-400 dark:text-white/30'
                           }`}>
                             {formatLocalizedDigits(item.id, language)}
                           </span>
                           
                           <span className={`text-base sm:text-lg font-black tracking-tight leading-snug transition-colors duration-300 ${
-                            isOpen ? 'text-[#0D1C2E] dark:text-white' : 'text-slate-700 dark:text-white/80 group-hover:text-[#0D1C2E] dark:group-hover:text-white'
+                            isOpen ? 'text-[#0B1F3A] dark:text-white' : 'text-slate-700 dark:text-white/80 group-hover:text-[#0B1F3A] dark:group-hover:text-white'
                           }`}>
                             {item.q}
                           </span>
@@ -493,7 +493,7 @@ export const ContactView: React.FC = () => {
 
                         <div className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
                           isOpen 
-                            ? 'bg-[#FF5722] border-[#FF5722] text-white rotate-90' 
+                            ? 'bg-[#0B1F3A] border-[#0B1F3A] text-white rotate-90' 
                             : 'border-slate-300 dark:border-white/20 text-slate-500 dark:text-white/50 group-hover:border-slate-400 dark:group-hover:border-white/40'
                         }`}>
                           <span className="material-symbols-outlined text-sm font-bold">

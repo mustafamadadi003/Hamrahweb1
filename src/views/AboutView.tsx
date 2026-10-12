@@ -91,19 +91,19 @@ export const AboutView: React.FC = () => {
   ];
 
   const SectionDivider = () => (
-    <div className="relative w-full py-4 flex items-center justify-center bg-[#F8F9FF] dark:bg-[#0A1224]">
+    <div className="relative w-full py-4 flex items-center justify-center bg-[#F8F9FF] dark:bg-[#0B1F3A]">
       <div className="w-full max-w-[1100px] h-[1px] bg-slate-300 dark:bg-white/10 relative">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#FF5722] shadow-[0_0_10px_#FF5722]" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#0B1F3A] shadow-[0_0_10px_#0B1F3A]" />
       </div>
     </div>
   );
 
   return (
-    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#2EE6D6] selection:text-[#0F2040] transition-colors duration-300 pt-20">
+    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#00F5D4] selection:text-[#0B1F3A] transition-colors duration-300 pt-20">
 
       {/* 1. ABOUT INTRO */}
-      <div className="relative w-full h-[180px] sm:h-[220px] overflow-hidden bg-gradient-to-b from-transparent via-[#EFF4FF] dark:via-[#0F1A30] to-[#F8F9FF] dark:to-[#0A1224] flex items-center justify-center pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-gradient-to-tr from-[#FF5722]/10 to-[#2EE6D6]/10 rounded-full blur-[140px] animate-pulse" />
+      <div className="relative w-full h-[180px] sm:h-[220px] overflow-hidden bg-gradient-to-b from-transparent via-[#EFF4FF] dark:via-[#0D2645] to-[#F8F9FF] dark:to-[#0B1F3A] flex items-center justify-center pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-gradient-to-tr from-[#0B1F3A]/10 to-[#00F5D4]/10 rounded-full blur-[140px] animate-pulse" />
       </div>
 
       <section className="relative w-full pb-24 px-6">
@@ -112,13 +112,13 @@ export const AboutView: React.FC = () => {
           {/* Left Column */}
           <ScrollReveal variant="fade-right" className="lg:col-span-7 flex flex-col space-y-6">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2 h-2 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {t.aboutUs.badge}
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight leading-[1.15]">
               {t.aboutUs.title}
             </h2>
 
@@ -131,33 +131,33 @@ export const AboutView: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap items-center gap-6 pt-4">
-              <div className="flex items-center gap-4 bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 px-4 py-3 rounded-2xl shadow-xl backdrop-blur-sm">
+              <div className="flex items-center gap-4 bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 px-4 py-3 rounded-2xl shadow-xl backdrop-blur-sm">
                 <div className="flex items-end gap-0.5 h-6 shrink-0" title="Audio Stream">
                   {[1.2, 2.5, 1.8, 2.8, 1.5, 2.3].map((multiplier, i) => (
                     <motion.span
                       key={i}
                       animate={{ height: ['15%', '100%', '15%'] }}
                       transition={{ repeat: Infinity, duration: multiplier, ease: 'easeInOut' }}
-                      className="w-0.5 bg-[#FF5722] rounded-full"
+                      className="w-0.5 bg-[#0B1F3A] rounded-full"
                     />
                   ))}
                 </div>
 
                 <div className="flex -space-x-3 shrink-0">
-                  <img src={founderImg} alt="Founder" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0A1224] object-cover object-top" />
-                  <img src={techLeadImg} alt="CEO" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0A1224] object-cover object-top" />
-                  <img src={growthLeadImg} alt="Manager" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0A1224] object-cover object-top" />
+                  <img src={founderImg} alt="Founder" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" />
+                  <img src={techLeadImg} alt="CEO" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" />
+                  <img src={growthLeadImg} alt="Manager" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" />
                 </div>
 
                 <div className="text-left">
-                  <p className="text-xs font-bold text-[#0D1C2E] dark:text-white leading-none mb-1">Ali Rahimi</p>
+                  <p className="text-xs font-bold text-[#0B1F3A] dark:text-white leading-none mb-1">Ali Rahimi</p>
                   <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">CEO</p>
                 </div>
               </div>
 
               <button
                 onClick={openConsultationModal}
-                className="inline-flex items-center gap-2.5 bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] font-bold text-sm px-7 py-4 rounded-full transition shadow-xl cursor-pointer transform hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] font-bold text-sm px-7 py-4 rounded-full transition shadow-xl cursor-pointer transform hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span className="material-symbols-outlined text-xs bg-white/20 rounded-full p-0.5 flex items-center justify-center font-bold">
                   arrow_outward
@@ -172,18 +172,18 @@ export const AboutView: React.FC = () => {
             <motion.div
               whileHover={{ y: -6, boxShadow: "0px 0px 30px rgba(46, 230, 214, 0.15)" }}
               transition={{ duration: 0.3 }}
-              className="relative p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 shadow-2xl flex flex-col items-center justify-center text-center group max-w-sm w-full"
+              className="relative p-8 sm:p-10 rounded-3xl bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 shadow-2xl flex flex-col items-center justify-center text-center group max-w-sm w-full"
             >
-              <div className="w-14 h-14 rounded-full border border-[#DCE9FF] dark:border-white/10 bg-slate-50 dark:bg-white/5 flex items-center justify-center text-[#2EE6D6] mb-6 shadow-md group-hover:scale-105 transition-transform">
+              <div className="w-14 h-14 rounded-full border border-[#DCE9FF] dark:border-white/10 bg-slate-50 dark:bg-white/5 flex items-center justify-center text-[#00F5D4] mb-6 shadow-md group-hover:scale-105 transition-transform">
                 <span className="material-symbols-outlined text-3xl font-light">hub</span>
               </div>
-              <h3 className="text-xl font-bold text-[#0D1C2E] dark:text-white mb-3 group-hover:text-[#2EE6D6] transition-colors">
+              <h3 className="text-xl font-bold text-[#0B1F3A] dark:text-white mb-3 group-hover:text-[#00F5D4] transition-colors">
                 {t.aboutUs.collabTitle}
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-light">
                 {t.aboutUs.collabDesc}
               </p>
-              <div className="absolute inset-0 bg-[#2EE6D6]/5 opacity-0 group-hover:opacity-100 rounded-3xl blur-2xl transition-opacity pointer-events-none -z-10" />
+              <div className="absolute inset-0 bg-[#00F5D4]/5 opacity-0 group-hover:opacity-100 rounded-3xl blur-2xl transition-opacity pointer-events-none -z-10" />
             </motion.div>
           </ScrollReveal>
 
@@ -193,17 +193,17 @@ export const AboutView: React.FC = () => {
       <SectionDivider />
 
       {/* 2. OUR STORY */}
-      <section className="relative w-full py-28 px-6 bg-[#EFF4FF] dark:bg-[#0F1A30]">
+      <section className="relative w-full py-28 px-6 bg-[#EFF4FF] dark:bg-[#0D2645]">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center">
           
           <ScrollReveal variant="fade-up" className="text-center mb-24">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {t.aboutUs.storyBadge}
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight">
               {t.aboutUs.storyTitle}
             </h2>
           </ScrollReveal>
@@ -212,7 +212,7 @@ export const AboutView: React.FC = () => {
             <div className="absolute md:left-1/2 left-8 -translate-x-1/2 top-4 bottom-4 w-[2px] bg-slate-300 dark:bg-slate-700/60 rounded-full z-0" />
             <motion.div
               style={{ scaleY, originY: 0 }}
-              className="absolute md:left-1/2 left-8 -translate-x-1/2 top-4 bottom-4 w-[3px] bg-gradient-to-b from-[#FF5722] via-orange-500 to-[#2EE6D6] shadow-[0_0_12px_#FF5722] rounded-full z-0 origin-top"
+              className="absolute md:left-1/2 left-8 -translate-x-1/2 top-4 bottom-4 w-[3px] bg-gradient-to-b from-[#0B1F3A] via-orange-500 to-[#00F5D4] shadow-[0_0_12px_#0B1F3A] rounded-full z-0 origin-top"
             />
 
             <div className="w-full space-y-16">
@@ -229,12 +229,12 @@ export const AboutView: React.FC = () => {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true, margin: '-60px' }}
                           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                          className="w-full max-w-[340px] bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 relative group hover:border-[#FF5722]/40 shadow-xl transition-all duration-300"
+                          className="w-full max-w-[340px] bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 relative group hover:border-[#0B1F3A]/40 shadow-xl transition-all duration-300"
                         >
-                          <span className="absolute top-4 right-4 px-2 py-0.5 rounded bg-slate-100 dark:bg-black/60 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-[#FF5722] tracking-wider uppercase">
+                          <span className="absolute top-4 right-4 px-2 py-0.5 rounded bg-slate-100 dark:bg-black/60 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-[#0B1F3A] tracking-wider uppercase">
                             {item.year}
                           </span>
-                          <h4 className="text-base font-bold text-[#0D1C2E] dark:text-white mt-2 mb-3 tracking-tight group-hover:text-[#FF5722] transition-colors">
+                          <h4 className="text-base font-bold text-[#0B1F3A] dark:text-white mt-2 mb-3 tracking-tight group-hover:text-[#0B1F3A] transition-colors">
                             {item.title}
                           </h4>
                           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-light">
@@ -251,13 +251,13 @@ export const AboutView: React.FC = () => {
                       initial={{ scale: 0.8, backgroundColor: "#ffffff", borderColor: "#cbd5e1" }}
                       whileInView={{
                         scale: [0.8, 1],
-                        backgroundColor: "#FF5722",
-                        borderColor: "#FF5722",
-                        boxShadow: "0 0 15px #FF5722, 0 0 30px #FF5722",
+                        backgroundColor: "#0B1F3A",
+                        borderColor: "#0B1F3A",
+                        boxShadow: "0 0 15px #0B1F3A, 0 0 30px #0B1F3A",
                       }}
                       viewport={{ once: false, amount: 0.7 }}
                       transition={{ type: "spring", stiffness: 220, damping: 14 }}
-                      className="absolute md:left-1/2 left-8 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full border-2 border-[#FF5722] flex items-center justify-center font-bold text-white text-xs shadow-lg bg-[#0F2040]"
+                      className="absolute md:left-1/2 left-8 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full border-2 border-[#0B1F3A] flex items-center justify-center font-bold text-white text-xs shadow-lg bg-[#0B1F3A]"
                     >
                       {idx + 1}
                     </motion.div>
@@ -270,12 +270,12 @@ export const AboutView: React.FC = () => {
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true, margin: '-60px' }}
                           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                          className="w-full max-w-[340px] bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 relative group hover:border-[#FF5722]/40 shadow-xl transition-all duration-300"
+                          className="w-full max-w-[340px] bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 relative group hover:border-[#0B1F3A]/40 shadow-xl transition-all duration-300"
                         >
-                          <span className="absolute top-4 right-4 px-2 py-0.5 rounded bg-slate-100 dark:bg-black/60 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-[#FF5722] tracking-wider uppercase">
+                          <span className="absolute top-4 right-4 px-2 py-0.5 rounded bg-slate-100 dark:bg-black/60 border border-slate-200 dark:border-white/5 text-[10px] font-bold text-[#0B1F3A] tracking-wider uppercase">
                             {item.year}
                           </span>
-                          <h4 className="text-base font-bold text-[#0D1C2E] dark:text-white mt-2 mb-3 tracking-tight group-hover:text-[#FF5722] transition-colors">
+                          <h4 className="text-base font-bold text-[#0B1F3A] dark:text-white mt-2 mb-3 tracking-tight group-hover:text-[#0B1F3A] transition-colors">
                             {item.title}
                           </h4>
                           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-light">
@@ -300,17 +300,17 @@ export const AboutView: React.FC = () => {
       <SectionDivider />
 
       {/* 3. RECOGNITION */}
-      <section className="relative w-full py-28 px-6 bg-[#F8F9FF] dark:bg-[#0A1224] overflow-hidden">
+      <section className="relative w-full py-28 px-6 bg-[#F8F9FF] dark:bg-[#0B1F3A] overflow-hidden">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           
           <ScrollReveal variant="fade-right" className="lg:col-span-6 text-left">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2 h-2 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {t.aboutUs.recognitionBadge}
               </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight mb-6">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight mb-6">
               {t.aboutUs.recognitionTitle}
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-light max-w-[520px]">
@@ -320,22 +320,22 @@ export const AboutView: React.FC = () => {
 
           {/* Right side stats row */}
           <ScrollReveal variant="fade-left" className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 text-center flex flex-col justify-center shadow-xl">
-              <div className="text-3xl sm:text-4xl font-extrabold text-[#0D1C2E] dark:text-white mb-2 tabular-nums">
+            <div className="bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 text-center flex flex-col justify-center shadow-xl">
+              <div className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] dark:text-white mb-2 tabular-nums">
                 <AnimatedCounter end={2} suffix="%" />
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">Google Partners Worldwide</p>
             </div>
 
-            <div className="bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 text-center flex flex-col justify-center shadow-xl">
-              <div className="text-3xl sm:text-4xl font-extrabold text-[#0D1C2E] dark:text-white mb-2 tabular-nums">
+            <div className="bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 text-center flex flex-col justify-center shadow-xl">
+              <div className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] dark:text-white mb-2 tabular-nums">
                 <AnimatedCounter end={2018} />
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">Year Founded</p>
             </div>
 
-            <div className="bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 text-center flex flex-col justify-center shadow-xl">
-              <div className="text-3xl sm:text-4xl font-extrabold text-[#0D1C2E] dark:text-white mb-2 tabular-nums">
+            <div className="bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 rounded-2xl p-6 text-center flex flex-col justify-center shadow-xl">
+              <div className="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] dark:text-white mb-2 tabular-nums">
                 <AnimatedCounter end={1} />
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">Co-Founders, One Vision</p>
@@ -348,18 +348,18 @@ export const AboutView: React.FC = () => {
       <SectionDivider />
 
       {/* 4. SERVICES SHOWCASE */}
-      <section className="relative w-full py-28 px-6 bg-[#EFF4FF] dark:bg-[#0F1A30]">
+      <section className="relative w-full py-28 px-6 bg-[#EFF4FF] dark:bg-[#0D2645]">
         <div className="max-w-[1100px] mx-auto">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
             <div className="lg:col-span-7 text-left">
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#2EE6D6] shadow-[0_0_8px_#2EE6D6]" />
-                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#2EE6D6]">
+                <span className="w-2 h-2 rounded-full bg-[#00F5D4] shadow-[0_0_8px_#00F5D4]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#00F5D4]">
                   {t.aboutUs.servicesBadge}
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight">
+              <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight">
                 {t.aboutUs.servicesTitle}
               </h2>
             </div>
@@ -378,7 +378,7 @@ export const AboutView: React.FC = () => {
               { title: t.servicesExplorer.socialTitle || 'Social Media Management', img: collageTeamImg, pills: ['Social', 'Content'] },
             ].map((srv, idx) => (
               <ScrollReveal key={idx} variant="fade-up" delay={idx * 0.1}>
-                <div className="relative rounded-2xl overflow-hidden border border-[#DCE9FF] dark:border-white/10 bg-white dark:bg-[#111C33] group h-[290px] flex flex-col justify-end p-6 shadow-2xl">
+                <div className="relative rounded-2xl overflow-hidden border border-[#DCE9FF] dark:border-white/10 bg-white dark:bg-[#0B1F3A] group h-[290px] flex flex-col justify-end p-6 shadow-2xl">
                   <img
                     src={srv.img}
                     alt={srv.title}
@@ -398,7 +398,7 @@ export const AboutView: React.FC = () => {
                   )}
 
                   <div className="relative z-20">
-                    <h3 className="text-xl font-bold text-white group-hover:text-[#2EE6D6] transition-colors">
+                    <h3 className="text-xl font-bold text-white group-hover:text-[#00F5D4] transition-colors">
                       {srv.title}
                     </h3>
                   </div>
@@ -413,7 +413,7 @@ export const AboutView: React.FC = () => {
       <SectionDivider />
 
       {/* 5. TEAM MEMBERS (3-card Coverflow Carousel) */}
-      <section className="relative w-full py-28 px-6 bg-[#F8F9FF] dark:bg-[#0A1224] text-[#0D1C2E] dark:text-white">
+      <section className="relative w-full py-28 px-6 bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#0B1F3A] dark:text-white">
         <div className="max-w-[1100px] mx-auto relative z-10">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-16">
@@ -424,7 +424,7 @@ export const AboutView: React.FC = () => {
                   {t.teamCarousel.badge}
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-[44px] font-extrabold text-[#0D1C2E] dark:text-white tracking-tight leading-[1.1]">
+              <h2 className="text-3xl sm:text-[44px] font-extrabold text-[#0B1F3A] dark:text-white tracking-tight leading-[1.1]">
                 {t.teamCarousel.title}
               </h2>
             </div>
@@ -446,7 +446,7 @@ export const AboutView: React.FC = () => {
             >
               <button
                 onClick={handlePrevTeam}
-                className="absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0F2040] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
+                className="absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
               >
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -455,7 +455,7 @@ export const AboutView: React.FC = () => {
 
               <button
                 onClick={handleNextTeam}
-                className="absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0F2040] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
+                className="absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
               >
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -521,8 +521,8 @@ export const AboutView: React.FC = () => {
             </div>
 
             <div className="flex sm:hidden justify-center gap-4 mt-6 z-40">
-              <button onClick={handlePrevTeam} className="w-12 h-12 bg-[#0F2040] text-white rounded-full border border-white/10 flex items-center justify-center">←</button>
-              <button onClick={handleNextTeam} className="w-12 h-12 bg-[#0F2040] text-white rounded-full border border-white/10 flex items-center justify-center">→</button>
+              <button onClick={handlePrevTeam} className="w-12 h-12 bg-[#0B1F3A] text-white rounded-full border border-white/10 flex items-center justify-center">←</button>
+              <button onClick={handleNextTeam} className="w-12 h-12 bg-[#0B1F3A] text-white rounded-full border border-white/10 flex items-center justify-center">→</button>
             </div>
 
             <div className="flex justify-center gap-2 mt-6 sm:mt-8">
@@ -530,7 +530,7 @@ export const AboutView: React.FC = () => {
                 <button
                   key={dotIdx}
                   onClick={() => setActiveTeamIndex(dotIdx)}
-                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${dotIdx === activeTeamIndex ? 'w-6 bg-[#0D1C2E] dark:bg-white' : 'w-2 bg-slate-400 dark:bg-zinc-600'}`}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${dotIdx === activeTeamIndex ? 'w-6 bg-[#0B1F3A] dark:bg-white' : 'w-2 bg-slate-400 dark:bg-zinc-600'}`}
                 />
               ))}
             </div>
@@ -542,20 +542,20 @@ export const AboutView: React.FC = () => {
       <SectionDivider />
 
       {/* 6. REVIEWS STRIP */}
-      <section className="relative w-full py-20 px-6 bg-[#EFF4FF] dark:bg-[#0F1A30] overflow-hidden">
+      <section className="relative w-full py-20 px-6 bg-[#EFF4FF] dark:bg-[#0D2645] overflow-hidden">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Summary Card */}
-          <div className="lg:col-span-4 bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-xl font-black text-[#0D1C2E] dark:text-white">Google</span>
+                <span className="text-xl font-black text-[#0B1F3A] dark:text-white">Google</span>
                 <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold">Verified</span>
               </div>
               <div className="text-yellow-400 text-sm mb-2">★★★★★</div>
-              <p className="text-sm font-bold text-[#0D1C2E] dark:text-white">{t.googleReviews.reviewsCount}</p>
+              <p className="text-sm font-bold text-[#0B1F3A] dark:text-white">{t.googleReviews.reviewsCount}</p>
             </div>
-            <button className="mt-6 w-full py-2.5 rounded-xl border border-slate-300 dark:border-white/20 text-[#0D1C2E] dark:text-white font-bold text-xs hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+            <button className="mt-6 w-full py-2.5 rounded-xl border border-slate-300 dark:border-white/20 text-[#0B1F3A] dark:text-white font-bold text-xs hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
               {t.googleReviews.writeReview}
             </button>
           </div>
@@ -567,10 +567,10 @@ export const AboutView: React.FC = () => {
               { name: t.googleReviews.r2Name, text: t.googleReviews.r2Text },
               { name: t.googleReviews.r3Name, text: t.googleReviews.r3Text },
             ].map((rev, rIdx) => (
-              <div key={rIdx} className="bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 p-5 rounded-xl flex flex-col justify-between shadow-lg">
+              <div key={rIdx} className="bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 p-5 rounded-xl flex flex-col justify-between shadow-lg">
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold text-[#0D1C2E] dark:text-white">{rev.name}</span>
+                    <span className="text-xs font-bold text-[#0B1F3A] dark:text-white">{rev.name}</span>
                     <span className="text-[10px] text-emerald-400 font-mono">G</span>
                   </div>
                   <div className="text-yellow-400 text-xs mb-2">★★★★★</div>
@@ -578,7 +578,7 @@ export const AboutView: React.FC = () => {
                 </div>
                 <div className="mt-4 pt-2 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-[10px] text-slate-500">
                   <span>Verified User</span>
-                  <span className="text-[#006A62] dark:text-[#2EE6D6]">Read more</span>
+                  <span className="text-[#00BFA5] dark:text-[#00F5D4]">Read more</span>
                 </div>
               </div>
             ))}

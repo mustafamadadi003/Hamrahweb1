@@ -84,7 +84,7 @@ export const Header: React.FC = () => {
                   />
                 </div>
                 <span className="hidden sm:inline text-sm font-black tracking-tight text-slate-900 dark:text-white">
-                  Hamrah<span className="text-[#FF5722] dark:text-[#FF7A59]">Tech</span>
+                  Hamrah<span className="text-[#0B1F3A] dark:text-[#0B1F3A]">Tech</span>
                 </span>
               </button>
 
@@ -98,7 +98,7 @@ export const Header: React.FC = () => {
                       onClick={() => handleNavClick(item.id)}
                       className={`px-4 py-1.5 text-xs font-bold rounded-full transition-all duration-250 whitespace-nowrap cursor-pointer ${
                         isActive
-                          ? 'bg-[#0F2040] dark:bg-white text-white dark:text-black font-extrabold shadow-sm'
+                          ? 'bg-[#0B1F3A] dark:bg-white text-white dark:text-black font-extrabold shadow-sm'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                       }`}
                     >
@@ -114,16 +114,16 @@ export const Header: React.FC = () => {
                 <div className="relative">
                   <button
                     onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                    className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-white hover:border-[#2EE6D6] transition-all cursor-pointer shadow-sm"
+                    className="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-white hover:border-[#00F5D4] transition-all cursor-pointer shadow-sm"
                   >
-                    <span className="material-symbols-outlined text-sm text-[#2EE6D6]">translate</span>
+                    <span className="material-symbols-outlined text-sm text-[#00F5D4]">translate</span>
                     <span>{language === 'en' ? 'EN' : language === 'prs' ? 'دری' : 'پښتو'}</span>
                     <span className="material-symbols-outlined text-xs">arrow_drop_down</span>
                   </button>
 
                   {isLangDropdownOpen && (
                     <div
-                      className={`absolute top-full mt-2 w-40 rounded-xl bg-white dark:bg-[#111C33] border border-slate-200 dark:border-white/10 shadow-2xl py-1 z-50 ${
+                      className={`absolute top-full mt-2 w-40 rounded-xl bg-white dark:bg-[#0B1F3A] border border-slate-200 dark:border-white/10 shadow-2xl py-1 z-50 ${
                         isRtl ? 'right-0' : 'left-0'
                       }`}
                     >
@@ -136,7 +136,7 @@ export const Header: React.FC = () => {
                           }}
                           className={`w-full flex items-center justify-between px-3 py-2 text-xs font-bold cursor-pointer transition-colors ${
                             language === lang.code
-                              ? 'bg-[#2EE6D6]/10 text-[#006A62] dark:text-[#2EE6D6]'
+                              ? 'bg-[#00F5D4]/10 text-[#00BFA5] dark:text-[#00F5D4]'
                               : 'text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                           }`}
                         >
@@ -151,7 +151,7 @@ export const Header: React.FC = () => {
                 {/* Theme Toggle Button */}
                 <button
                   onClick={toggleTheme}
-                  className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-[#2EE6D6] flex items-center justify-center hover:scale-105 transition-all cursor-pointer shadow-sm"
+                  className="w-8 h-8 sm:w-8.5 sm:h-8.5 rounded-full bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-[#00F5D4] flex items-center justify-center hover:scale-105 transition-all cursor-pointer shadow-sm"
                   title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                 >
                   <span className="material-symbols-outlined text-base">
@@ -162,7 +162,7 @@ export const Header: React.FC = () => {
                 {/* Primary CTA */}
                 <button
                   onClick={openConsultationModal}
-                  className="inline-flex items-center gap-1.5 bg-[#2EE6D6] hover:bg-[#52EDE1] text-[#0F2040] font-black text-xs px-3.5 py-2 sm:px-4.5 sm:py-2.5 rounded-full transition-all duration-200 transform active:scale-95 shadow-md cursor-pointer whitespace-nowrap"
+                  className="inline-flex items-center gap-1.5 bg-[#00F5D4] hover:bg-[#00F5D4] text-[#0B1F3A] font-black text-xs px-3.5 py-2 sm:px-4.5 sm:py-2.5 rounded-full transition-all duration-200 transform active:scale-95 shadow-md cursor-pointer whitespace-nowrap"
                 >
                   {/* Circular Arrow Icon on its Left */}
                   <span className="material-symbols-outlined text-xs sm:text-sm font-black bg-white/30 rounded-full p-0.5 flex items-center justify-center">
@@ -202,7 +202,7 @@ export const Header: React.FC = () => {
                         onClick={() => handleNavClick(item.id)}
                         className={`w-full text-left py-3 px-4.5 rounded-xl text-xs font-bold transition-all ${
                           isActive
-                            ? 'bg-[#2EE6D6]/10 text-[#006A62] dark:text-[#2EE6D6]'
+                            ? 'bg-[#00F5D4]/10 text-[#00BFA5] dark:text-[#00F5D4]'
                             : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white'
                         }`}
                       >

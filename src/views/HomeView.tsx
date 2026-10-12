@@ -25,19 +25,19 @@ const StepCard: React.FC<StepCardProps> = ({ step, index, isRtl }) => {
   const delayTime = index * 0.1;
   return (
     <ScrollReveal variant="fade-up" delay={delayTime} className="relative w-full pt-4" once={true}>
-      <div className="relative bg-white dark:bg-[#111C33] hover:bg-slate-50 dark:hover:bg-[#172440] rounded-3xl border border-[#DCE9FF] dark:border-white/5 p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <div className={`absolute -top-3 ${isRtl ? 'left-6' : 'right-6'} bg-[#FF5722] text-white text-xs font-black px-3.5 py-1 rounded-full shadow-lg border-2 border-white dark:border-[#111C33] z-30 select-none`}>
+      <div className="relative bg-white dark:bg-[#0B1F3A] hover:bg-slate-50 dark:hover:bg-[#102B4D] rounded-3xl border border-[#DCE9FF] dark:border-white/5 p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div className={`absolute -top-3 ${isRtl ? 'left-6' : 'right-6'} bg-[#0B1F3A] text-white text-xs font-black px-3.5 py-1 rounded-full shadow-lg border-2 border-white dark:border-[#0B1F3A] z-30 select-none`}>
           {step.num}
         </div>
         <div className="flex items-center gap-4 mb-4">
-          <div className="relative w-11 h-11 rounded-2xl bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#FF5722] shadow-sm shrink-0">
+          <div className="relative w-11 h-11 rounded-2xl bg-[#EFF4FF] dark:bg-white/5 border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#0B1F3A] shadow-sm shrink-0">
             <span className="material-symbols-outlined text-xl">{step.icon}</span>
           </div>
           <div className="flex flex-col">
-            <div className="text-[10px] font-black text-[#FF5722] mb-0.5 tracking-widest uppercase">
+            <div className="text-[10px] font-black text-[#0B1F3A] mb-0.5 tracking-widest uppercase">
               {isRtl ? `مرحله ${step.num}` : `Step ${step.num}`}
             </div>
-            <h3 className="text-sm sm:text-base font-extrabold text-[#0D1C2E] dark:text-white tracking-tight">{step.title}</h3>
+            <h3 className="text-sm sm:text-base font-extrabold text-[#0B1F3A] dark:text-white tracking-tight">{step.title}</h3>
           </div>
         </div>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium">{step.desc}</p>
@@ -368,19 +368,19 @@ export const HomeView: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#2EE6D6] selection:text-[#0F2040] transition-colors duration-300">
+    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#00F5D4] selection:text-[#0B1F3A] transition-colors duration-300">
 
       {/* 1. HERO SECTION */}
       <section id="hero" className="relative w-full min-h-screen flex flex-col justify-center pt-24 pb-20 px-6 overflow-hidden">
         {/* Ambient pulse glowing orbs in the background */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#FF5722]/10 to-[#2EE6D6]/10 rounded-full blur-[160px] pointer-events-none animate-pulse duration-[8000ms]" />
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#0B1F3A]/10 to-[#00F5D4]/10 rounded-full blur-[160px] pointer-events-none animate-pulse duration-[8000ms]" />
 
         <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center relative z-10 w-full">
           
           {/* Eyebrow Label (Small colored dot + tiny muted text) */}
           <ScrollReveal variant="fade-up">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200/50 dark:bg-white/5 border border-slate-300/50 dark:border-white/10 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#2EE6D6] shadow-[0_0_8px_#2EE6D6]" />
+              <span className="w-2 h-2 rounded-full bg-[#00F5D4] shadow-[0_0_8px_#00F5D4]" />
               <span className="text-[11px] font-extrabold uppercase tracking-widest text-slate-600 dark:text-slate-400">
                 {t.hero.badgeTagline}
               </span>
@@ -389,8 +389,8 @@ export const HomeView: React.FC = () => {
 
           {/* Centered H1: "Full-Service Digital Solutions To Get You More Leads & Growth" */}
           <ScrollReveal variant="fade-up" delay={0.1}>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight leading-[1.1] mb-8 max-w-5xl">
-              Full-Service <span className="bg-gradient-to-r from-[#FF5722] via-[#FF7A59] to-[#2EE6D6] bg-clip-text text-transparent">Digital Solutions</span> To Get You More Leads & Growth
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight leading-[1.1] mb-8 max-w-5xl">
+              Full-Service <span className="bg-gradient-to-r from-[#0B1F3A] via-[#0B1F3A] to-[#00F5D4] bg-clip-text text-transparent">Digital Solutions</span> To Get You More Leads & Growth
             </h1>
           </ScrollReveal>
 
@@ -405,7 +405,7 @@ export const HomeView: React.FC = () => {
           <ScrollReveal variant="fade-up" delay={0.3}>
             <button
               onClick={openConsultationModal}
-              className="px-8 py-4 bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] font-bold rounded-full transition-all duration-300 shadow-xl hover:shadow-[#2EE6D6]/20 cursor-pointer text-sm sm:text-base transform active:scale-95"
+              className="px-8 py-4 bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] font-bold rounded-full transition-all duration-300 shadow-xl hover:shadow-[#00F5D4]/20 cursor-pointer text-sm sm:text-base transform active:scale-95"
             >
               Get a Free Consultation
             </button>
@@ -415,13 +415,13 @@ export const HomeView: React.FC = () => {
         {/* BOTTOM HERO: Radial aurora gradient + Greyscale Logos Loop marquee */}
         <div className="relative w-full mt-24">
           {/* Large rising aurora gradient glow */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[320px] bg-gradient-to-t from-[#FF5722]/15 via-[#805AD5]/15 to-transparent rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[320px] bg-gradient-to-t from-[#0B1F3A]/15 via-[#805AD5]/15 to-transparent rounded-full blur-[100px] pointer-events-none" />
 
           {/* Logos Marquee strip */}
           <div className="relative w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-slate-200/30 dark:bg-[#080E1C]/40 backdrop-blur-md py-6 overflow-hidden">
             {/* Soft fade on edges */}
-            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F8F9FF] dark:from-[#0A1224] to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F8F9FF] dark:from-[#0A1224] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#F8F9FF] dark:from-[#0B1F3A] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#F8F9FF] dark:from-[#0B1F3A] to-transparent z-10 pointer-events-none" />
 
             <div className={`flex whitespace-nowrap ${isRtl ? 'animate-marquee-right' : 'animate-marquee-left'} hover:[animation-play-state:paused]`}>
               
@@ -461,11 +461,11 @@ export const HomeView: React.FC = () => {
           <ScrollReveal variant="fade-right" className="lg:col-span-5 flex flex-col h-full justify-stretch">
             <div className="relative w-full h-[320px] sm:h-[380px] lg:h-full lg:min-h-[440px] rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 bg-white dark:bg-[#0E1524] shadow-2xl p-5 sm:p-6 group cursor-grab active:cursor-grabbing">
               {/* Thick dark border element */}
-              <div className="absolute inset-0 border-[6px] border-[#F8F9FF] dark:border-[#0A1224] rounded-3xl z-10 pointer-events-none" />
+              <div className="absolute inset-0 border-[6px] border-[#F8F9FF] dark:border-[#0B1F3A] rounded-3xl z-10 pointer-events-none" />
 
               {/* Top Row: Tech badge + Faint Partner-logo corners text */}
               <div className="relative z-20 flex justify-between items-start">
-                <span className="px-3 py-1 rounded-full bg-black/40 dark:bg-black/60 backdrop-blur-md border border-white/10 text-[9px] uppercase font-bold tracking-wider text-[#2EE6D6]">
+                <span className="px-3 py-1 rounded-full bg-black/40 dark:bg-black/60 backdrop-blur-md border border-white/10 text-[9px] uppercase font-bold tracking-wider text-[#00F5D4]">
                   Executive Bio
                 </span>
                 <span className="font-mono font-bold text-[9px] text-slate-800/10 dark:text-white/10 tracking-widest uppercase">
@@ -498,14 +498,14 @@ export const HomeView: React.FC = () => {
             
             {/* Section Eyebrow */}
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {t.story.badge}
               </span>
             </div>
 
             {/* Scroll fill animation H2 heading */}
-            <h2 className="relative text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight leading-tight select-none py-1">
+            <h2 className="relative text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight leading-tight select-none py-1">
               {/* Background Layer: Muted */}
               <span className="text-slate-300 dark:text-white/10 transition-colors">
                 {storyTitle.normal}
@@ -516,11 +516,11 @@ export const HomeView: React.FC = () => {
 
               {/* Foreground Layer: Filled and colored, clipped based on scroll progress */}
               <motion.span
-                className="absolute inset-x-0 top-1 text-[#0D1C2E] dark:text-white pointer-events-none whitespace-pre-wrap"
+                className="absolute inset-x-0 top-1 text-[#0B1F3A] dark:text-white pointer-events-none whitespace-pre-wrap"
                 style={{ clipPath: clipPathValue }}
               >
                 {storyTitle.normal}
-                <span className="bg-gradient-to-r from-[#FF5722] to-[#FF7A59] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#0B1F3A] to-[#0B1F3A] bg-clip-text text-transparent">
                   {storyTitle.highlight}
                 </span>
               </motion.span>
@@ -538,7 +538,7 @@ export const HomeView: React.FC = () => {
 
             {/* Founder Mini-Card (rounded-2xl) with thin glowing white line below */}
             <div className="relative group">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-2xl bg-[#EFF4FF] dark:bg-[#111C33] border border-[#DCE9FF] dark:border-[#22304A] shadow-lg">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-4 rounded-2xl bg-[#EFF4FF] dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-[#22304A] shadow-lg">
                 
                 <div className="flex items-center gap-3">
                   {/* Circular Avatar */}
@@ -562,13 +562,13 @@ export const HomeView: React.FC = () => {
                           duration: multiplier,
                           ease: 'easeInOut',
                         }}
-                        className="w-0.5 bg-[#FF5722] rounded-full"
+                        className="w-0.5 bg-[#0B1F3A] rounded-full"
                       />
                     ))}
                   </div>
 
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-[#FF5722] tracking-wide">
+                    <h4 className="text-xs sm:text-sm font-bold text-[#0B1F3A] tracking-wide">
                       Mostafa Madadi
                     </h4>
                     <p className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 font-medium">{t.story.founderRole}</p>
@@ -577,10 +577,10 @@ export const HomeView: React.FC = () => {
 
                 {/* Tiny social icons */}
                 <div className="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs self-end sm:self-center">
-                  <a href="#about" className="hover:text-[#2EE6D6] transition-colors">
+                  <a href="#about" className="hover:text-[#00F5D4] transition-colors">
                     <span className="material-symbols-outlined text-base">alternate_email</span>
                   </a>
-                  <a href="#about" className="hover:text-[#2EE6D6] transition-colors">
+                  <a href="#about" className="hover:text-[#00F5D4] transition-colors">
                     <span className="material-symbols-outlined text-base">share</span>
                   </a>
                 </div>
@@ -602,7 +602,7 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 3. SERVICES SECTION ("Our Services") */}
-      <section ref={servicesSectionRef} id="services" className="relative w-full py-24 px-6 overflow-hidden bg-[#EFF4FF] dark:bg-[#0F1A30]">
+      <section ref={servicesSectionRef} id="services" className="relative w-full py-24 px-6 overflow-hidden bg-[#EFF4FF] dark:bg-[#0D2645]">
         <div className="max-w-[1200px] mx-auto">
           
           {/* Heading block */}
@@ -624,11 +624,11 @@ export const HomeView: React.FC = () => {
 
               {/* Foreground Layer: Filled and colored, clipped based on scroll progress */}
               <motion.span
-                className="absolute inset-x-0 top-1 text-[#0D1C2E] dark:text-white pointer-events-none text-left whitespace-pre-wrap"
+                className="absolute inset-x-0 top-1 text-[#0B1F3A] dark:text-white pointer-events-none text-left whitespace-pre-wrap"
                 style={{ clipPath: servicesClipPathValue }}
               >
                 {servicesTitle.normal}
-                <span className="bg-gradient-to-r from-[#2EE6D6] to-[#3B82F6] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#00F5D4] to-[#3B82F6] bg-clip-text text-transparent">
                   {servicesTitle.highlight}
                 </span>
               </motion.span>
@@ -639,7 +639,7 @@ export const HomeView: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
             
             {/* Left vertical accordion list - Separated glass card container */}
-            <div className={`lg:col-span-5 relative bg-white/60 dark:bg-[#111C33]/60 backdrop-blur-md rounded-3xl border border-[#DCE9FF] dark:border-white/5 p-6 flex flex-col justify-between space-y-4 max-h-[500px] overflow-y-auto custom-scrollbar shadow-xl`}>
+            <div className={`lg:col-span-5 relative bg-white/60 dark:bg-[#0B1F3A]/60 backdrop-blur-md rounded-3xl border border-[#DCE9FF] dark:border-white/5 p-6 flex flex-col justify-between space-y-4 max-h-[500px] overflow-y-auto custom-scrollbar shadow-xl`}>
               
               {/* Continuous vertical line/track (نوار) connecting the buttons */}
               <div className={`absolute top-10 bottom-10 w-[2px] bg-slate-200 dark:bg-slate-700/60 pointer-events-none ${isRtl ? 'right-12' : 'left-12'}`} />
@@ -662,8 +662,8 @@ export const HomeView: React.FC = () => {
                         : 'text-left pl-14 pr-4'
                     } ${
                       isActive
-                        ? 'bg-white dark:bg-[#0F1A30] border-[#DCE9FF] dark:border-white/10 text-[#0D1C2E] dark:text-white font-extrabold scale-[1.01] shadow-md'
-                        : 'bg-white/30 dark:bg-[#111C33]/20 border-transparent text-[#44474E] dark:text-slate-400 hover:text-[#0D1C2E] dark:hover:text-white hover:bg-white/80 dark:hover:bg-[#111C33]/50'
+                        ? 'bg-white dark:bg-[#0D2645] border-[#DCE9FF] dark:border-white/10 text-[#0B1F3A] dark:text-white font-extrabold scale-[1.01] shadow-md'
+                        : 'bg-white/30 dark:bg-[#0B1F3A]/20 border-transparent text-[#44474E] dark:text-slate-400 hover:text-[#0B1F3A] dark:hover:text-white hover:bg-white/80 dark:hover:bg-[#0B1F3A]/50'
                     }`}
                   >
                     {/* Glowing active indicator dot centered on the line */}
@@ -672,18 +672,18 @@ export const HomeView: React.FC = () => {
                         isRtl ? 'right-[18px]' : 'left-[18px]'
                       } ${
                         isActive 
-                          ? 'border-[#2EE6D6] bg-[#2EE6D6] shadow-[0_0_10px_#2EE6D6]' 
-                          : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-[#111C33]'
+                          ? 'border-[#00F5D4] bg-[#00F5D4] shadow-[0_0_10px_#00F5D4]' 
+                          : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-[#0B1F3A]'
                       }`}
                     >
                       {isActive && (
-                        <span className="absolute inset-[-4px] rounded-full border border-[#2EE6D6]/40 animate-ping pointer-events-none" />
+                        <span className="absolute inset-[-4px] rounded-full border border-[#00F5D4]/40 animate-ping pointer-events-none" />
                       )}
                     </span>
 
                     {/* Active vertical accent line on edge of button */}
                     {isActive && (
-                      <span className={`absolute top-3 bottom-3 w-[3px] bg-[#2EE6D6] ${isRtl ? 'right-0 rounded-l' : 'left-0 rounded-r'}`} />
+                      <span className={`absolute top-3 bottom-3 w-[3px] bg-[#00F5D4] ${isRtl ? 'right-0 rounded-l' : 'left-0 rounded-r'}`} />
                     )}
 
                     <span className="text-sm sm:text-base font-bold tracking-tight">{item.label}</span>
@@ -701,23 +701,23 @@ export const HomeView: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.25 }}
-                  className="h-full bg-white dark:bg-[#111C33] rounded-3xl border border-[#DCE9FF] dark:border-[#22304A] p-8 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden"
+                  className="h-full bg-white dark:bg-[#0B1F3A] rounded-3xl border border-[#DCE9FF] dark:border-[#22304A] p-8 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden"
                 >
                   <div>
                     {/* Line-art Outlined Icon (top-left) */}
-                    <div className="w-14 h-14 rounded-2xl border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#2EE6D6] bg-slate-50 dark:bg-white/5 mb-8">
+                    <div className="w-14 h-14 rounded-2xl border border-[#DCE9FF] dark:border-white/10 flex items-center justify-center text-[#00F5D4] bg-slate-50 dark:bg-white/5 mb-8">
                       <span className="material-symbols-outlined text-3xl font-light">
                         {currentService.icon}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-[#0D1C2E] dark:text-white mb-4">
+                    <h3 className="text-2xl font-bold text-[#0B1F3A] dark:text-white mb-4">
                       {currentService.title}
                     </h3>
 
                     {/* Paragraph with the first words in bold */}
                     <p className="text-[#44474E] dark:text-slate-300 leading-relaxed text-sm sm:text-base mb-8">
-                      <span className="font-extrabold text-[#006A62] dark:text-[#2EE6D6]">{currentService.desc.split(' ').slice(0, 4).join(' ')} </span>
+                      <span className="font-extrabold text-[#00BFA5] dark:text-[#00F5D4]">{currentService.desc.split(' ').slice(0, 4).join(' ')} </span>
                       {currentService.desc.split(' ').slice(4).join(' ')}
                     </p>
 
@@ -727,7 +727,7 @@ export const HomeView: React.FC = () => {
                         <React.Fragment key={idx}>
                           <span>{chip}</span>
                           {idx < currentService.chips.length - 1 && (
-                            <span className="text-[#2EE6D6]/30 font-light">|</span>
+                            <span className="text-[#00F5D4]/30 font-light">|</span>
                           )}
                         </React.Fragment>
                       ))}
@@ -738,9 +738,9 @@ export const HomeView: React.FC = () => {
                   <div>
                     <button
                       onClick={openConsultationModal}
-                      className="inline-flex items-center gap-3.5 bg-[#0F2040] dark:bg-white/10 hover:bg-[#172B52] dark:hover:bg-white/20 text-white font-bold text-xs px-6 py-3.5 rounded-full transition shadow-lg cursor-pointer"
+                      className="inline-flex items-center gap-3.5 bg-[#0B1F3A] dark:bg-white/10 hover:bg-[#172B52] dark:hover:bg-white/20 text-white font-bold text-xs px-6 py-3.5 rounded-full transition shadow-lg cursor-pointer"
                     >
-                      <span className="material-symbols-outlined text-sm bg-[#2EE6D6] text-black rounded-full p-0.5 flex items-center justify-center font-black">
+                      <span className="material-symbols-outlined text-sm bg-[#00F5D4] text-black rounded-full p-0.5 flex items-center justify-center font-black">
                         arrow_outward
                       </span>
                       <span>{t.servicesExplorer.readMore}</span>
@@ -757,19 +757,19 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 4. STRATEGY GRID SECTION (FORMERLY PORTFOLIO) */}
-      <section ref={strategySectionRef} id="portfolio" className="relative w-full py-28 px-6 bg-[#F8F9FF] dark:bg-[#0A1224] rounded-t-[48px] overflow-hidden">
+      <section ref={strategySectionRef} id="portfolio" className="relative w-full py-28 px-6 bg-[#F8F9FF] dark:bg-[#0B1F3A] rounded-t-[48px] overflow-hidden">
         
         {/* Glow ambient effects */}
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#FF5722]/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#0B1F3A]/5 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-[1400px] mx-auto">
           
           {/* Centered Heading block with Scroll Reveal text-fill */}
           <ScrollReveal variant="fade-up" className="mb-20 text-center flex flex-col items-center">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {isRtl ? 'استراتژی ما' : 'Our Strategy'}
               </span>
             </div>
@@ -785,11 +785,11 @@ export const HomeView: React.FC = () => {
 
               {/* Foreground Layer: Filled and colored, clipped based on scroll progress */}
               <motion.span
-                className="absolute inset-x-0 top-1 text-[#0D1C2E] dark:text-white pointer-events-none text-center whitespace-pre-wrap transition-colors duration-300"
+                className="absolute inset-x-0 top-1 text-[#0B1F3A] dark:text-white pointer-events-none text-center whitespace-pre-wrap transition-colors duration-300"
                 style={{ clipPath: strategyClipPathValue }}
               >
                 {strategyTitle.normal}
-                <span className="bg-gradient-to-r from-[#2EE6D6] to-[#3B82F6] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#00F5D4] to-[#3B82F6] bg-clip-text text-transparent">
                   {strategyTitle.highlight}
                 </span>
               </motion.span>
@@ -819,7 +819,7 @@ export const HomeView: React.FC = () => {
                   </div>
 
                   {/* Responsive Continuous Vertical Marquee in Middle */}
-                  <div className="w-full h-[320px] relative flex gap-4 overflow-hidden rounded-3xl border border-[#DCE9FF] dark:border-white/5 bg-white dark:bg-[#111C33] p-2.5 shadow-xl">
+                  <div className="w-full h-[320px] relative flex gap-4 overflow-hidden rounded-3xl border border-[#DCE9FF] dark:border-white/5 bg-white dark:bg-[#0B1F3A] p-2.5 shadow-xl">
                     {/* Left continuous marquee */}
                     <div className="w-1/2 h-full overflow-hidden relative">
                       <div className="flex flex-col gap-4 animate-marquee-up py-1 shrink-0">
@@ -843,8 +843,8 @@ export const HomeView: React.FC = () => {
                     </div>
 
                     {/* Fades to look cinematic */}
-                    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white dark:from-[#111C33] to-transparent pointer-events-none z-10" />
-                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white dark:from-[#111C33] to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white dark:from-[#0B1F3A] to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white dark:from-[#0B1F3A] to-transparent pointer-events-none z-10" />
                   </div>
 
                   {/* Remaining 3 Steps */}
@@ -859,7 +859,7 @@ export const HomeView: React.FC = () => {
                 <div className="hidden lg:block relative w-full h-[700px] max-w-[1250px] mx-auto mt-12">
                   
                   {/* Central Scrolling Marquee Columns (Clock Center) */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[310px] h-[520px] flex gap-4 overflow-hidden rounded-[32px] border border-[#DCE9FF] dark:border-white/5 bg-white dark:bg-[#111C33] p-3 shadow-2xl z-10">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[310px] h-[520px] flex gap-4 overflow-hidden rounded-[32px] border border-[#DCE9FF] dark:border-white/5 bg-white dark:bg-[#0B1F3A] p-3 shadow-2xl z-10">
                     
                     {/* Left marquee (UP) */}
                     <div className="w-1/2 h-full overflow-hidden relative">
@@ -884,8 +884,8 @@ export const HomeView: React.FC = () => {
                     </div>
 
                     {/* Fading Vignette layers */}
-                    <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white dark:from-[#111C33] to-transparent pointer-events-none z-10" />
-                    <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white dark:from-[#111C33] to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white dark:from-[#0B1F3A] to-transparent pointer-events-none z-10" />
+                    <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white dark:from-[#0B1F3A] to-transparent pointer-events-none z-10" />
                   </div>
 
                   {/* Circular/Clock Dial positioning of the cards wrapping the center */}
@@ -930,7 +930,7 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 5. STATS BAR */}
-      <section className="relative w-full py-12 bg-[#F8F9FF] dark:bg-[#0A1224] border-y border-[#DCE9FF] dark:border-white/5">
+      <section className="relative w-full py-12 bg-[#F8F9FF] dark:bg-[#0B1F3A] border-y border-[#DCE9FF] dark:border-white/5">
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 items-stretch text-center">
           {[
             { value: 390, suffix: '+', label: 'Delivered projects' },
@@ -944,7 +944,7 @@ export const HomeView: React.FC = () => {
                 i < 3 ? 'lg:border-r border-[#DCE9FF] dark:border-white/10' : ''
               }`}
             >
-              <div className="text-3xl sm:text-5xl font-black text-[#2EE6D6] mb-2 tracking-tight">
+              <div className="text-3xl sm:text-5xl font-black text-[#00F5D4] mb-2 tracking-tight">
                 <AnimatedCounter end={stat.value} suffix={stat.suffix} />
               </div>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium uppercase tracking-wider">
@@ -956,11 +956,11 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 6. REVIEWS STRIP */}
-      <section className="relative w-full py-20 px-6 bg-[#EFF4FF] dark:bg-[#0F1A30] overflow-hidden">
+      <section className="relative w-full py-20 px-6 bg-[#EFF4FF] dark:bg-[#0D2645] overflow-hidden">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-10 items-center">
           
           {/* Left: Google reviews summary card */}
-          <div className="w-full lg:w-1/3 shrink-0 p-8 rounded-3xl bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/5 shadow-xl text-center lg:text-left flex flex-col items-center lg:items-start space-y-4">
+          <div className="w-full lg:w-1/3 shrink-0 p-8 rounded-3xl bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/5 shadow-xl text-center lg:text-left flex flex-col items-center lg:items-start space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center font-black text-2xl text-black shadow-lg">
               G
             </div>
@@ -969,13 +969,13 @@ export const HomeView: React.FC = () => {
                 <span key={s} className="material-symbols-outlined fill-1">star</span>
               ))}
             </div>
-            <h4 className="text-lg font-extrabold text-[#0D1C2E] dark:text-white">15 Google reviews</h4>
+            <h4 className="text-lg font-extrabold text-[#0B1F3A] dark:text-white">15 Google reviews</h4>
             <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-xs">
               Direct and unfiltered client feedback vetted through independent business registries.
             </p>
             <button
               onClick={openConsultationModal}
-              className="px-4 py-2 text-xs font-bold rounded-full border border-[#DCE9FF] dark:border-white/15 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-[#2EE6D6] transition-colors cursor-pointer"
+              className="px-4 py-2 text-xs font-bold rounded-full border border-[#DCE9FF] dark:border-white/15 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-[#00F5D4] transition-colors cursor-pointer"
             >
               Write a review
             </button>
@@ -984,8 +984,8 @@ export const HomeView: React.FC = () => {
           {/* Right: auto-scroll rows list */}
           <div className="w-full lg:w-2/3 relative overflow-hidden py-4">
             {/* Edge fades */}
-            <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#EFF4FF] dark:from-[#0F1A30] to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#EFF4FF] dark:from-[#0F1A30] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#EFF4FF] dark:from-[#0D2645] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#EFF4FF] dark:from-[#0D2645] to-transparent z-10 pointer-events-none" />
 
             <div className="flex gap-6 animate-marquee-left hover:[animation-play-state:paused]">
               
@@ -998,11 +998,11 @@ export const HomeView: React.FC = () => {
               ].map((rev, idx) => (
                 <div
                   key={idx}
-                  className="w-[280px] p-6 rounded-2xl bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/5 shadow-lg flex flex-col justify-between shrink-0"
+                  className="w-[280px] p-6 rounded-2xl bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/5 shadow-lg flex flex-col justify-between shrink-0"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-3">
-                      <span className="text-xs font-extrabold text-[#0D1C2E] dark:text-white">{rev.name}</span>
+                      <span className="text-xs font-extrabold text-[#0B1F3A] dark:text-white">{rev.name}</span>
                       <span className="text-[10px] text-slate-500">2 weeks ago</span>
                     </div>
                     <div className="text-yellow-400 text-xs flex gap-0.5 mb-3">
@@ -1013,7 +1013,7 @@ export const HomeView: React.FC = () => {
                     </p>
                   </div>
                   <div className="mt-4 pt-3 border-t border-[#DCE9FF] dark:border-white/5 flex justify-between items-center">
-                    <span className="text-[10px] font-mono tracking-widest text-[#2EE6D6]">GOOGLE USER</span>
+                    <span className="text-[10px] font-mono tracking-widest text-[#00F5D4]">GOOGLE USER</span>
                     <span className="material-symbols-outlined text-sm text-slate-500">check_circle</span>
                   </div>
                 </div>
@@ -1028,7 +1028,7 @@ export const HomeView: React.FC = () => {
               ].map((rev, idx) => (
                 <div
                   key={`dup-${idx}`}
-                  className="w-[280px] p-6 rounded-2xl bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/5 shadow-lg flex flex-col justify-between shrink-0"
+                  className="w-[280px] p-6 rounded-2xl bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/5 shadow-lg flex flex-col justify-between shrink-0"
                 >
                   <div>
                     <div className="flex justify-between items-center mb-3">
@@ -1043,7 +1043,7 @@ export const HomeView: React.FC = () => {
                     </p>
                   </div>
                   <div className="mt-4 pt-3 border-t border-white/5 flex justify-between items-center">
-                    <span className="text-[10px] font-mono tracking-widest text-[#2EE6D6]">GOOGLE USER</span>
+                    <span className="text-[10px] font-mono tracking-widest text-[#00F5D4]">GOOGLE USER</span>
                     <span className="material-symbols-outlined text-sm text-slate-500">check_circle</span>
                   </div>
                 </div>
@@ -1056,7 +1056,7 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 7. TEAM SECTION ("Team members") */}
-      <section ref={teamSectionRef} id="team" className="relative w-full py-24 px-6 overflow-hidden bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF]">
+      <section ref={teamSectionRef} id="team" className="relative w-full py-24 px-6 overflow-hidden bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF]">
         <div className="max-w-[1100px] mx-auto relative z-10">
           
           {/* Header */}
@@ -1081,7 +1081,7 @@ export const HomeView: React.FC = () => {
 
                 {/* Foreground Layer: Filled and colored, clipped based on scroll progress */}
                 <motion.span
-                  className="absolute inset-x-0 top-1 text-[#0D1C2E] dark:text-white pointer-events-none whitespace-pre-wrap"
+                  className="absolute inset-x-0 top-1 text-[#0B1F3A] dark:text-white pointer-events-none whitespace-pre-wrap"
                   style={{ clipPath: teamClipPathValue }}
                 >
                   {teamTitle.normal}
@@ -1114,7 +1114,7 @@ export const HomeView: React.FC = () => {
               {/* Desktop Vertically Centered Arrow Buttons (Centered outside the stage) */}
               <button
                 onClick={handlePrevTeam}
-                className="absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0F2040] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
+                className="absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
                 aria-label="Previous Team Member"
               >
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -1124,7 +1124,7 @@ export const HomeView: React.FC = () => {
 
               <button
                 onClick={handleNextTeam}
-                className="absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0F2040] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
+                className="absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
                 aria-label="Next Team Member"
               >
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -1288,17 +1288,17 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 8 & 9. FAQ & CONTACT FORM CARD SECTION (Intersecting/Overlapping block) */}
-      <section id="faqs" className="relative w-full py-24 px-6 bg-[#EFF4FF] dark:bg-[#0F1A30] overflow-hidden">
+      <section id="faqs" className="relative w-full py-24 px-6 bg-[#EFF4FF] dark:bg-[#0D2645] overflow-hidden">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
           
           {/* Left bottom area: Floating rounded-2xl dark contact card (overlapping/standing out) */}
-          <div id="contact" className="lg:col-span-5 bg-white dark:bg-[#111C33] border border-[#DCE9FF] dark:border-white/10 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
+          <div id="contact" className="lg:col-span-5 bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
             <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] text-emerald-400 font-extrabold flex items-center gap-1.5 shadow-md">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>Response time: 1 hour</span>
             </div>
 
-            <h3 className="text-2xl font-extrabold text-[#0D1C2E] dark:text-white mt-2 mb-6">Tell details about your project</h3>
+            <h3 className="text-2xl font-extrabold text-[#0B1F3A] dark:text-white mt-2 mb-6">Tell details about your project</h3>
 
             {leadSubmitted ? (
               <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold text-center">
@@ -1313,7 +1313,7 @@ export const HomeView: React.FC = () => {
                     value={leadForm.fullName}
                     onChange={(e) => setLeadForm({ ...leadForm, fullName: e.target.value })}
                     placeholder={t.faqs.namePlaceholder}
-                    className="w-full bg-transparent border-b border-[#DCE9FF] dark:border-white/15 focus:border-[#2EE6D6] py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none transition-colors"
+                    className="w-full bg-transparent border-b border-[#DCE9FF] dark:border-white/15 focus:border-[#00F5D4] py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none transition-colors"
                   />
                 </div>
 
@@ -1324,7 +1324,7 @@ export const HomeView: React.FC = () => {
                     value={leadForm.email}
                     onChange={(e) => setLeadForm({ ...leadForm, email: e.target.value })}
                     placeholder={t.faqs.emailPlaceholder}
-                    className="w-full bg-transparent border-b border-[#DCE9FF] dark:border-white/15 focus:border-[#2EE6D6] py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none transition-colors"
+                    className="w-full bg-transparent border-b border-[#DCE9FF] dark:border-white/15 focus:border-[#00F5D4] py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none transition-colors"
                   />
                 </div>
 
@@ -1335,7 +1335,7 @@ export const HomeView: React.FC = () => {
                     value={leadForm.message}
                     onChange={(e) => setLeadForm({ ...leadForm, message: e.target.value })}
                     placeholder={t.faqs.messagePlaceholder}
-                    className="w-full bg-transparent border-b border-[#DCE9FF] dark:border-white/15 focus:border-[#2EE6D6] py-3 text-sm text-[#0D1C2E] dark:text-white focus:outline-none resize-y transition-colors"
+                    className="w-full bg-transparent border-b border-[#DCE9FF] dark:border-white/15 focus:border-[#00F5D4] py-3 text-sm text-[#0B1F3A] dark:text-white focus:outline-none resize-y transition-colors"
                   />
                 </div>
 
@@ -1345,7 +1345,7 @@ export const HomeView: React.FC = () => {
                     id="subscribeNews"
                     checked={leadForm.newsletter}
                     onChange={(e) => setLeadForm({ ...leadForm, newsletter: e.target.checked })}
-                    className="rounded text-[#2EE6D6] bg-slate-100 dark:bg-slate-800 border-[#DCE9FF] dark:border-white/10"
+                    className="rounded text-[#00F5D4] bg-slate-100 dark:bg-slate-800 border-[#DCE9FF] dark:border-white/10"
                   />
                   <label htmlFor="subscribeNews" className="text-xs text-slate-600 dark:text-slate-400 cursor-pointer">
                     Subscribe to Newsletter
@@ -1354,7 +1354,7 @@ export const HomeView: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] font-bold text-sm rounded-full shadow-lg flex items-center justify-center gap-2 cursor-pointer transition-all"
+                  className="w-full py-4 bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] font-bold text-sm rounded-full shadow-lg flex items-center justify-center gap-2 cursor-pointer transition-all"
                 >
                   <span className="material-symbols-outlined text-sm bg-white/10 rounded-full p-0.5 flex items-center justify-center">
                     arrow_outward
@@ -1374,13 +1374,13 @@ export const HomeView: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0D1C2E] dark:text-white tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight">
               Learn more from FAQs
             </h2>
 
             {/* Category tabs with underlined orange active state */}
             <div className="flex border-b border-[#DCE9FF] dark:border-white/10 w-full mb-8">
-              <button className="px-4 py-2.5 text-xs font-bold text-[#0D1C2E] dark:text-white uppercase tracking-widest border-b-2 border-[#FF5722] transition-all cursor-pointer">
+              <button className="px-4 py-2.5 text-xs font-bold text-[#0B1F3A] dark:text-white uppercase tracking-widest border-b-2 border-[#0B1F3A] transition-all cursor-pointer">
                 General Ask
               </button>
             </div>
@@ -1406,10 +1406,10 @@ export const HomeView: React.FC = () => {
                         <span className="text-xs font-mono font-bold text-slate-500">
                           {formatLocalizedNumber(idx + 1, language, 0).padStart(2, '0')}
                         </span>
-                        <span className="text-sm font-bold text-[#0D1C2E] dark:text-white">{faq.q}</span>
+                        <span className="text-sm font-bold text-[#0B1F3A] dark:text-white">{faq.q}</span>
                       </div>
                       <span className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform ${
-                        isOpen ? 'bg-[#FF5722] text-white rotate-45' : 'bg-white/5 text-slate-400'
+                        isOpen ? 'bg-[#0B1F3A] text-white rotate-45' : 'bg-white/5 text-slate-400'
                       }`}>
                         <span className="material-symbols-outlined text-base">add</span>
                       </span>
@@ -1438,7 +1438,7 @@ export const HomeView: React.FC = () => {
       </section>
 
       {/* 10. FOOTER */}
-      <footer id="footer" className="relative w-full pt-20 pb-12 bg-[#F8F9FF] dark:bg-[#0A1224] border-t border-[#DCE9FF] dark:border-white/5">
+      <footer id="footer" className="relative w-full pt-20 pb-12 bg-[#F8F9FF] dark:bg-[#0B1F3A] border-t border-[#DCE9FF] dark:border-white/5">
         <div className="max-w-[1200px] mx-auto px-6">
           
           {/* Main columns block */}
@@ -1446,8 +1446,8 @@ export const HomeView: React.FC = () => {
             
             {/* Brand Block */}
             <div className="lg:col-span-5 space-y-4 text-left">
-              <span className="text-2xl font-black tracking-tight text-[#0D1C2E] dark:text-white flex items-center gap-1">
-                Hamrah<span className="text-[#FF5722] dark:text-[#FF7A59]">Tech</span>
+              <span className="text-2xl font-black tracking-tight text-[#0B1F3A] dark:text-white flex items-center gap-1">
+                Hamrah<span className="text-[#0B1F3A] dark:text-[#0B1F3A]">Tech</span>
               </span>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
                 A highly premium, full-service digital agency delivering high-performance web engineering and localized conversion marketing strategy.
@@ -1460,12 +1460,12 @@ export const HomeView: React.FC = () => {
                 Quick Links
               </h4>
               <ul className="space-y-2 text-xs text-slate-500 dark:text-slate-400 font-semibold">
-                <li><a href="#hero" className="hover:text-[#2EE6D6] transition-colors">Home</a></li>
-                <li><a href="#about" className="hover:text-[#2EE6D6] transition-colors">About us</a></li>
-                <li><a href="#services" className="hover:text-[#2EE6D6] transition-colors">Services</a></li>
-                <li><a href="#faqs" className="hover:text-[#2EE6D6] transition-colors">FAQ's</a></li>
-                <li><a href="#contact" className="hover:text-[#2EE6D6] transition-colors">Contact</a></li>
-                <li><a href="#hero" className="hover:text-[#2EE6D6] transition-colors">Blogs</a></li>
+                <li><a href="#hero" className="hover:text-[#00F5D4] transition-colors">Home</a></li>
+                <li><a href="#about" className="hover:text-[#00F5D4] transition-colors">About us</a></li>
+                <li><a href="#services" className="hover:text-[#00F5D4] transition-colors">Services</a></li>
+                <li><a href="#faqs" className="hover:text-[#00F5D4] transition-colors">FAQ's</a></li>
+                <li><a href="#contact" className="hover:text-[#00F5D4] transition-colors">Contact</a></li>
+                <li><a href="#hero" className="hover:text-[#00F5D4] transition-colors">Blogs</a></li>
               </ul>
             </div>
 
@@ -1475,8 +1475,8 @@ export const HomeView: React.FC = () => {
                 All Pages
               </h4>
               <ul className="space-y-2 text-xs text-slate-500 dark:text-slate-400 font-semibold">
-                <li><a href="#faqs" className="hover:text-[#2EE6D6] transition-colors">Privacy Policy</a></li>
-                <li><a href="#faqs" className="hover:text-[#2EE6D6] transition-colors">Terms & Condition</a></li>
+                <li><a href="#faqs" className="hover:text-[#00F5D4] transition-colors">Privacy Policy</a></li>
+                <li><a href="#faqs" className="hover:text-[#00F5D4] transition-colors">Terms & Condition</a></li>
               </ul>
             </div>
 
@@ -1490,7 +1490,7 @@ export const HomeView: React.FC = () => {
                   <button
                     key={social}
                     title={social}
-                    className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-[#2EE6D6] hover:text-[#2EE6D6] text-slate-800 dark:text-white flex items-center justify-center transition-all cursor-pointer shadow-md hover:scale-105"
+                    className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-[#00F5D4] hover:text-[#00F5D4] text-slate-800 dark:text-white flex items-center justify-center transition-all cursor-pointer shadow-md hover:scale-105"
                   >
                     <span className="material-symbols-outlined text-sm">alternate_email</span>
                   </button>
@@ -1503,32 +1503,32 @@ export const HomeView: React.FC = () => {
           {/* Middle Info Row with circular dark icon badges */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-8 border-b border-slate-100 dark:border-white/5 text-xs text-slate-500 dark:text-slate-400 font-semibold text-left">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#006A62] dark:text-[#2EE6D6]">
+              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00BFA5] dark:text-[#00F5D4]">
                 <span className="material-symbols-outlined text-sm">location_on</span>
               </div>
               <div>
                 <p className="text-slate-500 uppercase tracking-widest text-[9px] font-bold">Office Address</p>
-                <p className="text-[#0D1C2E] dark:text-white mt-0.5">{t.contact.addressVal}</p>
+                <p className="text-[#0B1F3A] dark:text-white mt-0.5">{t.contact.addressVal}</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#006A62] dark:text-[#2EE6D6]">
+              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00BFA5] dark:text-[#00F5D4]">
                 <span className="material-symbols-outlined text-sm">support_agent</span>
               </div>
               <div>
                 <p className="text-slate-500 uppercase tracking-widest text-[9px] font-bold">24/7 Support</p>
-                <p className="text-[#0D1C2E] dark:text-white mt-0.5">{t.contact.phoneVal} · {t.contact.emailVal}</p>
+                <p className="text-[#0B1F3A] dark:text-white mt-0.5">{t.contact.phoneVal} · {t.contact.emailVal}</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#006A62] dark:text-[#2EE6D6]">
+              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00BFA5] dark:text-[#00F5D4]">
                 <span className="material-symbols-outlined text-sm">schedule</span>
               </div>
               <div>
                 <p className="text-slate-500 uppercase tracking-widest text-[9px] font-bold">Business Hours</p>
-                <p className="text-[#0D1C2E] dark:text-white mt-0.5">{t.contact.hoursVal}</p>
+                <p className="text-[#0B1F3A] dark:text-white mt-0.5">{t.contact.hoursVal}</p>
               </div>
             </div>
           </div>

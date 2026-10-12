@@ -20,34 +20,34 @@ export const ConsultationModal: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fade-in">
-      <div className="relative w-full max-w-lg bg-white dark:bg-[#111C33] rounded-3xl border border-[#E2E8EE] dark:border-[#22304A] p-6 sm:p-8 shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-lg bg-white dark:bg-[#0B1F3A] rounded-3xl border border-[#E2E8EE] dark:border-[#22304A] p-6 sm:p-8 shadow-2xl overflow-hidden">
         
         {/* Close Button */}
         <button
           onClick={closeConsultationModal}
-          className="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#EFF4FF] dark:bg-[#0A1224] border border-[#DCE9FF] dark:border-[#22304A] text-[#475569] dark:text-[#9CA3AF] hover:text-[#0D1C2E] dark:hover:text-white flex items-center justify-center cursor-pointer transition-colors"
+          className="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#EFF4FF] dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-[#22304A] text-[#475569] dark:text-[#9CA3AF] hover:text-[#0B1F3A] dark:hover:text-white flex items-center justify-center cursor-pointer transition-colors"
         >
           <span className="material-symbols-outlined text-lg">close</span>
         </button>
 
         {submitted ? (
           <div className="py-10 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-[#006A62]/10 dark:bg-[#2EE6D6]/20 text-[#006A62] dark:text-[#2EE6D6] flex items-center justify-center mx-auto shadow-lg">
+            <div className="w-16 h-16 rounded-full bg-[#00BFA5]/10 dark:bg-[#00F5D4]/20 text-[#00BFA5] dark:text-[#00F5D4] flex items-center justify-center mx-auto shadow-lg">
               <span className="material-symbols-outlined text-3xl">check_circle</span>
             </div>
-            <h3 className="text-2xl font-bold text-[#0D1C2E] dark:text-[#F3F4F6]">
+            <h3 className="text-2xl font-bold text-[#0B1F3A] dark:text-[#F3F4F6]">
               Thank you! Your inquiry has been sent to Hamrah Tech.
             </h3>
           </div>
         ) : (
           <div className="space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#006A62]/10 dark:bg-[#2EE6D6]/10 text-[#006A62] dark:text-[#2EE6D6] font-semibold text-xs">
-              <span className="w-2 h-2 rounded-full bg-[#006A62] dark:bg-[#2EE6D6] animate-ping" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00BFA5]/10 dark:bg-[#00F5D4]/10 text-[#00BFA5] dark:text-[#00F5D4] font-semibold text-xs">
+              <span className="w-2 h-2 rounded-full bg-[#00BFA5] dark:bg-[#00F5D4] animate-ping" />
               <span>{t.contact.cardGuarantee}</span>
             </div>
 
             <div>
-              <h2 className="text-2xl font-extrabold text-[#0D1C2E] dark:text-[#F3F4F6]">
+              <h2 className="text-2xl font-extrabold text-[#0B1F3A] dark:text-[#F3F4F6]">
                 {t.modal.title}
               </h2>
               <p className="text-xs text-[#475569] dark:text-[#9CA3AF] mt-1">
@@ -57,13 +57,13 @@ export const ConsultationModal: React.FC = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#0D1C2E] dark:text-[#9CA3AF] mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#0B1F3A] dark:text-[#9CA3AF] mb-1.5">
                   {t.modal.serviceSelectLabel}
                 </label>
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0A1224] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#006A62] dark:focus:border-[#2EE6D6] transition"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0B1F3A] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#00BFA5] dark:focus:border-[#00F5D4] transition"
                 >
                   <option value="seo">{t.modal.optionSeo}</option>
                   <option value="ads">{t.modal.optionAds}</option>
@@ -74,7 +74,7 @@ export const ConsultationModal: React.FC = () => {
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#0D1C2E] dark:text-[#9CA3AF] mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#0B1F3A] dark:text-[#9CA3AF] mb-1.5">
                   {t.modal.fullNameLabel}
                 </label>
                 <input
@@ -83,13 +83,13 @@ export const ConsultationModal: React.FC = () => {
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                   placeholder={t.contact.fullNamePlaceholder}
-                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0A1224] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#006A62] dark:focus:border-[#2EE6D6] transition"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0B1F3A] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#00BFA5] dark:focus:border-[#00F5D4] transition"
                 />
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-[#0D1C2E] dark:text-[#9CA3AF] mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#0B1F3A] dark:text-[#9CA3AF] mb-1.5">
                     {t.modal.emailLabel}
                   </label>
                   <input
@@ -98,12 +98,12 @@ export const ConsultationModal: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder={t.contact.emailPlaceholder}
-                    className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0A1224] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#006A62] dark:focus:border-[#2EE6D6] transition"
+                    className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0B1F3A] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#00BFA5] dark:focus:border-[#00F5D4] transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-[#0D1C2E] dark:text-[#9CA3AF] mb-1.5">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-[#0B1F3A] dark:text-[#9CA3AF] mb-1.5">
                     {t.modal.phoneLabel}
                   </label>
                   <input
@@ -111,13 +111,13 @@ export const ConsultationModal: React.FC = () => {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+1 (757) 416-2841"
-                    className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0A1224] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#006A62] dark:focus:border-[#2EE6D6] transition"
+                    className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0B1F3A] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#00BFA5] dark:focus:border-[#00F5D4] transition"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-[#0D1C2E] dark:text-[#9CA3AF] mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[#0B1F3A] dark:text-[#9CA3AF] mb-1.5">
                   {t.modal.messageLabel}
                 </label>
                 <textarea
@@ -125,14 +125,14 @@ export const ConsultationModal: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder={t.contact.messagePlaceholder}
-                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0A1224] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0D1C2E] dark:text-white focus:outline-none focus:border-[#006A62] dark:focus:border-[#2EE6D6] transition resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-[#F8F9FF] dark:bg-[#0B1F3A] border border-[#E2E8EE] dark:border-[#22304A] text-sm text-[#0B1F3A] dark:text-white focus:outline-none focus:border-[#00BFA5] dark:focus:border-[#00F5D4] transition resize-none"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0F2040] dark:bg-[#2EE6D6] hover:bg-[#172B52] dark:hover:bg-[#52EDE1] text-white dark:text-[#0F2040] font-bold text-sm py-3.5 rounded-full transition shadow-lg cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#0B1F3A] dark:bg-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-[#00F5D4] text-white dark:text-[#0B1F3A] font-bold text-sm py-3.5 rounded-full transition shadow-lg cursor-pointer"
                 >
                   <span>{t.modal.submitModal}</span>
                   <span className="material-symbols-outlined text-lg">
@@ -144,11 +144,11 @@ export const ConsultationModal: React.FC = () => {
 
             <div className="pt-3 border-t border-[#E2E8EE] dark:border-[#22304A] flex items-center justify-between text-[11px] text-[#475569] dark:text-[#9CA3AF]">
               <span className="flex items-center gap-1">
-                <span className="material-symbols-outlined text-sm text-[#006A62] dark:text-[#2EE6D6]">lock</span>
+                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">lock</span>
                 {t.contact.trustBadge1}
               </span>
               <span className="flex items-center gap-1">
-                <span className="material-symbols-outlined text-sm text-[#006A62] dark:text-[#2EE6D6]">verified</span>
+                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">verified</span>
                 {t.contact.trustBadge2}
               </span>
             </div>

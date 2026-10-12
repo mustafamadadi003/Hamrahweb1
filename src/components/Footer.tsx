@@ -24,15 +24,15 @@ export const Footer: React.FC = () => {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="text-2xl font-black tracking-tight text-[#0D1C2E] dark:text-[#F3F4F6]">
-                Hamrah<span className="text-[#FF5722] dark:text-[#FF7A59]">Tech</span>
+              <span className="text-2xl font-black tracking-tight text-[#0B1F3A] dark:text-[#F3F4F6]">
+                Hamrah<span className="text-[#0B1F3A] dark:text-[#0B1F3A]">Tech</span>
               </span>
             </div>
             <p className="text-[#475569] dark:text-[#9CA3AF] text-sm leading-relaxed max-w-sm">
               {t.hero.description1}
             </p>
             <div className="pt-2">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FF5722]/10 dark:bg-[#FF7A59]/10 text-[#FF5722] dark:text-[#FF7A59] text-xs font-bold">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/10 dark:bg-[#0B1F3A]/10 text-[#0B1F3A] dark:text-[#0B1F3A] text-xs font-bold">
                 <span className="material-symbols-outlined text-sm">verified</span>
                 5★ Rated Digital Marketing Agency
               </span>
@@ -41,32 +41,32 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-[#0D1C2E] dark:text-[#F3F4F6] tracking-wide uppercase">
+            <h4 className="text-sm font-bold text-[#0B1F3A] dark:text-[#F3F4F6] tracking-wide uppercase">
               Quick Navigation
             </h4>
             <ul className="space-y-2 text-sm text-[#475569] dark:text-[#9CA3AF]">
               <li>
-                <Link to="/" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors cursor-pointer">
+                <Link to="/" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.home}
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors cursor-pointer">
+                <Link to="/about-us" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.aboutUs}
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors cursor-pointer">
+                <Link to="/services" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.services}
                 </Link>
               </li>
               <li>
-                <Link to="/faqs" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors cursor-pointer">
+                <Link to="/faqs" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.faqs}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors cursor-pointer">
+                <Link to="/contact" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.contact}
                 </Link>
               </li>
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
 
           {/* Capabilities */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-[#0D1C2E] dark:text-[#F3F4F6] tracking-wide uppercase">
+            <h4 className="text-sm font-bold text-[#0B1F3A] dark:text-[#F3F4F6] tracking-wide uppercase">
               Core Solutions
             </h4>
             <ul className="space-y-2 text-sm text-[#475569] dark:text-[#9CA3AF]">
@@ -89,24 +89,24 @@ export const Footer: React.FC = () => {
 
           {/* Contact Us */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-[#0D1C2E] dark:text-[#F3F4F6] tracking-wide uppercase">
+            <h4 className="text-sm font-bold text-[#0B1F3A] dark:text-[#F3F4F6] tracking-wide uppercase">
               Get In Touch
             </h4>
             <div className="space-y-2.5 text-xs text-[#475569] dark:text-[#9CA3AF]">
               <div className="flex items-start gap-2">
-                <span className="material-symbols-outlined text-sm text-[#006A62] dark:text-[#2EE6D6]">location_on</span>
+                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">location_on</span>
                 <span>{t.contact.addressVal}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[#006A62] dark:text-[#2EE6D6]">mail</span>
+                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">mail</span>
                 <span>{t.contact.emailVal}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[#006A62] dark:text-[#2EE6D6]">call</span>
+                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">call</span>
                 <span>{t.contact.phoneVal}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[#006A62] dark:text-[#2EE6D6]">schedule</span>
+                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">schedule</span>
                 <span>{t.contact.hoursVal}</span>
               </div>
             </div>
@@ -118,9 +118,9 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#475569] dark:text-[#9CA3AF]">
           <p>© {new Date().getFullYear()} Hamrah Tech. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link to="/faqs" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors">Privacy Policy</Link>
-            <Link to="/faqs" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors">Terms of Service</Link>
-            <Link to="/contact" className="hover:text-[#006A62] dark:hover:text-[#2EE6D6] transition-colors">24/7 Client Support</Link>
+            <Link to="/faqs" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors">Privacy Policy</Link>
+            <Link to="/faqs" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors">24/7 Client Support</Link>
           </div>
         </div>
 

@@ -265,22 +265,22 @@ export const GalleryView: React.FC = () => {
   });
 
   return (
-    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0A1224] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#2EE6D6] selection:text-[#0F2040] transition-colors duration-300 pt-28">
+    <div className="flex flex-col w-full bg-[#F8F9FF] dark:bg-[#0B1F3A] text-[#44474E] dark:text-[#9CA3AF] selection:bg-[#00F5D4] selection:text-[#0B1F3A] transition-colors duration-300 pt-28">
       
       {/* HERO SECTION */}
-      <section className="relative w-full py-20 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0F1A30]">
-        <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-[#2EE6D6]/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-[280px] h-[280px] bg-[#FF5722]/10 rounded-full blur-[120px] pointer-events-none" />
+      <section className="relative w-full py-20 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0D2645]">
+        <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-[#00F5D4]/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[280px] h-[280px] bg-[#0B1F3A]/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-[1200px] mx-auto text-center relative z-10">
           <ScrollReveal variant="fade-up">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-sm mb-6">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF5722] shadow-[0_0_8px_#FF5722]" />
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF5722]">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#0B1F3A] shadow-[0_0_8px_#0B1F3A]" />
+              <span className="text-xs font-extrabold uppercase tracking-widest text-[#0B1F3A]">
                 {curContent.badge}
               </span>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#0D1C2E] dark:text-white tracking-tight leading-tight max-w-3xl mx-auto mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-[#0B1F3A] dark:text-white tracking-tight leading-tight max-w-3xl mx-auto mb-6">
               {curContent.title}
             </h1>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed font-light mb-10">
@@ -297,7 +297,7 @@ export const GalleryView: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={curContent.searchPlaceholder}
-                className="w-full pl-11 pr-4 py-4 rounded-full bg-white dark:bg-[#111C33] border border-slate-200 dark:border-white/10 text-sm text-[#0D1C2E] dark:text-white placeholder-slate-400 shadow-lg focus:outline-none focus:border-[#2EE6D6] transition-all"
+                className="w-full pl-11 pr-4 py-4 rounded-full bg-white dark:bg-[#0B1F3A] border border-slate-200 dark:border-white/10 text-sm text-[#0B1F3A] dark:text-white placeholder-slate-400 shadow-lg focus:outline-none focus:border-[#00F5D4] transition-all"
               />
             </div>
           </ScrollReveal>
@@ -305,7 +305,7 @@ export const GalleryView: React.FC = () => {
       </section>
 
       {/* CATEGORY TABS & PRODUCTS GRID */}
-      <section className="relative w-full py-20 px-6 lg:px-12 bg-[#F8F9FF] dark:bg-[#0A1224]">
+      <section className="relative w-full py-20 px-6 lg:px-12 bg-[#F8F9FF] dark:bg-[#0B1F3A]">
         <div className="max-w-[1200px] mx-auto">
           
           {/* CATEGORIES */}
@@ -318,8 +318,8 @@ export const GalleryView: React.FC = () => {
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`px-5 py-2.5 rounded-full text-xs font-extrabold transition-all duration-300 cursor-pointer ${
                     isActive
-                      ? 'bg-[#0F2040] dark:bg-[#2EE6D6] text-white dark:text-[#0F2040] shadow-lg scale-105'
-                      : 'bg-white dark:bg-[#111C33] text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10 hover:border-[#2EE6D6]'
+                      ? 'bg-[#0B1F3A] dark:bg-[#00F5D4] text-white dark:text-[#0B1F3A] shadow-lg scale-105'
+                      : 'bg-white dark:bg-[#0B1F3A] text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10 hover:border-[#00F5D4]'
                   }`}
                 >
                   {cat.label}
@@ -333,7 +333,7 @@ export const GalleryView: React.FC = () => {
             {filteredProducts.map((product) => (
               <StaggerItem
                 key={product.id}
-                className="bg-white dark:bg-[#111C33] border border-slate-200 dark:border-white/10 rounded-3xl overflow-hidden flex flex-col justify-between group shadow-xl hover:shadow-2xl transition duration-500"
+                className="bg-white dark:bg-[#0B1F3A] border border-slate-200 dark:border-white/10 rounded-3xl overflow-hidden flex flex-col justify-between group shadow-xl hover:shadow-2xl transition duration-500"
               >
                 <div>
                   <div className="h-56 w-full relative overflow-hidden bg-slate-200 dark:bg-slate-900">
@@ -346,13 +346,13 @@ export const GalleryView: React.FC = () => {
                     <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-mono tracking-widest text-white/90 uppercase border border-white/10">
                       {product.subtitle}
                     </div>
-                    <div className={`absolute bottom-4 ${isRtl ? 'left-4' : 'right-4'} bg-[#FF5722] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md`}>
+                    <div className={`absolute bottom-4 ${isRtl ? 'left-4' : 'right-4'} bg-[#0B1F3A] text-white text-[10px] font-extrabold px-3 py-1 rounded-full uppercase shadow-md`}>
                       {product.badge}
                     </div>
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-lg sm:text-xl font-black text-[#0D1C2E] dark:text-white mb-2 group-hover:text-[#FF5722] transition-colors">
+                    <h3 className="text-lg sm:text-xl font-black text-[#0B1F3A] dark:text-white mb-2 group-hover:text-[#0B1F3A] transition-colors">
                       {product.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-light mb-6">
@@ -372,7 +372,7 @@ export const GalleryView: React.FC = () => {
                 <div className="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
                   <button
                     onClick={openConsultationModal}
-                    className="inline-flex items-center gap-2 text-xs font-black text-[#FF5722] hover:underline cursor-pointer group/btn"
+                    className="inline-flex items-center gap-2 text-xs font-black text-[#0B1F3A] hover:underline cursor-pointer group/btn"
                   >
                     <span>{language === 'prs' ? 'استعلام قیمت و مشاوره' : language === 'pus' ? 'مشوره او قیمت' : 'Request Demo / Pricing'}</span>
                     <span className="material-symbols-outlined text-xs group-hover/btn:translate-x-1 transition-transform">
@@ -396,9 +396,9 @@ export const GalleryView: React.FC = () => {
       </section>
 
       {/* CALL TO ACTION BANNER */}
-      <section className="relative w-full py-24 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0F1A30] border-t border-slate-200 dark:border-white/10 text-center">
+      <section className="relative w-full py-24 px-6 lg:px-12 bg-[#EFF4FF] dark:bg-[#0D2645] border-t border-slate-200 dark:border-white/10 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-4xl font-black text-[#0D1C2E] dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-4xl font-black text-[#0B1F3A] dark:text-white mb-4">
             {curContent.ctaTitle}
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mb-8 font-light">
@@ -406,7 +406,7 @@ export const GalleryView: React.FC = () => {
           </p>
           <button
             onClick={openConsultationModal}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0F2040] dark:bg-[#2EE6D6] text-white dark:text-[#0F2040] font-black text-sm shadow-xl hover:scale-105 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#0B1F3A] dark:bg-[#00F5D4] text-white dark:text-[#0B1F3A] font-black text-sm shadow-xl hover:scale-105 transition-all cursor-pointer"
           >
             <span className="material-symbols-outlined text-sm">arrow_outward</span>
             <span>{curContent.ctaBtn}</span>

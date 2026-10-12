@@ -42,30 +42,30 @@
 /* Light & Dark Theme Colors (Light default) */
 :root {
   --bg-main: #F8F9FF;
-  --bg-alt: #EFF4FF;
+  --bg-alt: #EBF1F5;
   --bg-card: #FFFFFF;
-  --bg-container: #E6EEFF;
-  --border-color: #DCE9FF;
-  --text-heading: #0D1C2E;
+  --bg-container: #E1E9F0;
+  --border-color: #D1DBE5;
+  --text-heading: #0B1F3A;
   --text-body: #44474E;
-  --accent-color: #006A62;
-  --accent-bright: #2EE6D6;
-  --primary-btn: #0F2040;
+  --accent-color: #00BFA5;
+  --accent-bright: #00F5D4;
+  --primary-btn: #0B1F3A;
   --primary-btn-text: #FFFFFF;
 }
 
 .dark {
-  --bg-main: #0A1224;
-  --bg-alt: #0F1A30;
-  --bg-card: #111C33;
-  --bg-container: #172440;
-  --border-color: #22304A;
+  --bg-main: #0B1F3A;
+  --bg-alt: #0D2645;
+  --bg-card: #0B1F3A;
+  --bg-container: #102B4D;
+  --border-color: #1A365D;
   --text-heading: #F3F4F6;
   --text-body: #9CA3AF;
-  --accent-color: #2EE6D6;
-  --accent-bright: #2EE6D6;
-  --primary-btn: #2EE6D6;
-  --primary-btn-text: #0F2040;
+  --accent-color: #00F5D4;
+  --accent-bright: #00F5D4;
+  --primary-btn: #00F5D4;
+  --primary-btn-text: #0B1F3A;
 }
 
 /* Scrollbar */
