@@ -5,6 +5,7 @@ import { AnimatedCounter, formatLocalizedNumber } from '../components/AnimatedCo
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'motion/react';
 
 // Local Image Imports
+import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
 import founderImg from '../assets/images/founder.jpg';
 import techLeadImg from '../assets/images/tech_lead.jpg';
 import growthLeadImg from '../assets/images/growth_lead.jpg';
@@ -390,7 +391,7 @@ export const HomeView: React.FC = () => {
           {/* Centered H1: "Full-Service Digital Solutions To Get You More Leads & Growth" */}
           <ScrollReveal variant="fade-up" delay={0.1}>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0B1F3A] dark:text-white tracking-tight leading-[1.1] mb-8 max-w-5xl">
-              Full-Service <span className="bg-gradient-to-r from-[#0B1F3A] via-[#0B1F3A] to-[#00F5D4] bg-clip-text text-transparent">Digital Solutions</span> To Get You More Leads & Growth
+              Full-Service <span className="bg-gradient-to-r from-[#0B1F3A] dark:from-white via-[#0B1F3A] dark:via-[#00F5D4] to-[#00F5D4] bg-clip-text text-transparent">Digital Solutions</span> To Get You More Leads & Growth
             </h1>
           </ScrollReveal>
 
@@ -1446,9 +1447,16 @@ export const HomeView: React.FC = () => {
             
             {/* Brand Block */}
             <div className="lg:col-span-5 space-y-4 text-left">
-              <span className="text-2xl font-black tracking-tight text-[#0B1F3A] dark:text-white flex items-center gap-1">
-                Hamrah<span className="text-[#0B1F3A] dark:text-[#0B1F3A]">Tech</span>
-              </span>
+              <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0">
+                <img
+                  src={logoImg}
+                  alt="Hamrah Tech Logo"
+                  className="h-full w-auto object-contain"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">
                 A highly premium, full-service digital agency delivering high-performance web engineering and localized conversion marketing strategy.
               </p>

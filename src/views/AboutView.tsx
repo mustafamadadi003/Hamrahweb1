@@ -144,9 +144,9 @@ export const AboutView: React.FC = () => {
                 </div>
 
                 <div className="flex -space-x-3 shrink-0">
-                  <img src={founderImg} alt="Founder" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" />
-                  <img src={techLeadImg} alt="CEO" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" />
-                  <img src={growthLeadImg} alt="Manager" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" />
+                  <img src={founderImg} alt="Founder" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" loading="lazy" decoding="async" />
+                  <img src={techLeadImg} alt="CEO" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" loading="lazy" decoding="async" />
+                  <img src={growthLeadImg} alt="Manager" className="w-10 h-10 rounded-full border-2 border-white dark:border-[#0B1F3A] object-cover object-top" loading="lazy" decoding="async" />
                 </div>
 
                 <div className="text-left">
@@ -504,7 +504,7 @@ export const AboutView: React.FC = () => {
                     style={{ transformOrigin: 'bottom center' }}
                     className="absolute w-[220px] h-[310px] sm:w-[270px] sm:h-[370px] rounded-[28px] overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 cursor-pointer group"
                   >
-                    <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" referrerPolicy="no-referrer" />
+                    <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}

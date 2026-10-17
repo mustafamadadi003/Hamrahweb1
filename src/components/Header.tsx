@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useApp, PageView } from '../context/AppContext';
 import { Language } from '../i18n/translations';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImg from '../assets/images/logo.jpg';
+import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
 
 export const Header: React.FC = () => {
   const { language, setLanguage, theme, toggleTheme, t, isRtl, openConsultationModal, currentPage, setCurrentPage } = useApp();
@@ -75,16 +75,18 @@ export const Header: React.FC = () => {
                 onClick={() => handleNavClick('home')}
                 className="flex items-center gap-2.5 text-left cursor-pointer shrink-0"
               >
-                <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-white/10 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-0.5">
+                <div className="relative h-8 sm:h-9 w-auto overflow-hidden shrink-0">
                   <img
                     src={logoImg}
                     alt="Hamrah Tech Logo"
-                    className="w-full h-full object-contain"
+                    className="h-full w-auto object-contain"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <span className="hidden sm:inline text-sm font-black tracking-tight text-slate-900 dark:text-white">
-                  Hamrah<span className="text-[#0B1F3A] dark:text-[#0B1F3A]">Tech</span>
+                  Hamrah<span className="text-[#0B1F3A] dark:text-[#00F5D4]">Tech</span>
                 </span>
               </button>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
-import logoImg from '../assets/images/logo.jpg';
+import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
 
 export const Footer: React.FC = () => {
   const { t } = useApp();
@@ -15,24 +15,21 @@ export const Footer: React.FC = () => {
           
           {/* Brand Bio */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-[#E2E8EE] dark:border-[#22304A] bg-white shadow-sm shrink-0">
-                <img
-                  src={logoImg}
-                  alt="Hamrah Tech Logo"
-                  className="w-full h-full object-contain p-0.5"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <span className="text-2xl font-black tracking-tight text-[#0B1F3A] dark:text-[#F3F4F6]">
-                Hamrah<span className="text-[#0B1F3A] dark:text-[#0B1F3A]">Tech</span>
-              </span>
+            <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0">
+              <img
+                src={logoImg}
+                alt="Hamrah Tech Logo"
+                className="h-full w-auto object-contain"
+                referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <p className="text-[#475569] dark:text-[#9CA3AF] text-sm leading-relaxed max-w-sm">
               {t.hero.description1}
             </p>
             <div className="pt-2">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/10 dark:bg-[#0B1F3A]/10 text-[#0B1F3A] dark:text-[#0B1F3A] text-xs font-bold">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0B1F3A]/10 dark:bg-[#00F5D4]/10 text-[#0B1F3A] dark:text-[#00F5D4] text-xs font-bold">
                 <span className="material-symbols-outlined text-sm">verified</span>
                 5★ Rated Digital Marketing Agency
               </span>
