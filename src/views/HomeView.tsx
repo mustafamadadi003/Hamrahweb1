@@ -5,7 +5,7 @@ import { AnimatedCounter, formatLocalizedNumber } from '../components/AnimatedCo
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'motion/react';
 
 // Local Image Imports
-import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
+import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
 import founderImg from '../assets/images/founder.jpg';
 import techLeadImg from '../assets/images/tech_lead.jpg';
 import growthLeadImg from '../assets/images/growth_lead.jpg';
@@ -1447,11 +1447,11 @@ export const HomeView: React.FC = () => {
             
             {/* Brand Block */}
             <div className="lg:col-span-5 space-y-4 text-left">
-              <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0">
+              <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0 flex items-center">
                 <img
                   src={logoImg}
                   alt="Hamrah Tech Logo"
-                  className="h-full w-auto object-contain"
+                  className="h-full w-auto object-contain dark:invert transition-all"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"

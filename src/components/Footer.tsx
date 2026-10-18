@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
-import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
+import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
 
 export const Footer: React.FC = () => {
   const { t } = useApp();
@@ -15,11 +15,11 @@ export const Footer: React.FC = () => {
           
           {/* Brand Bio */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0">
+            <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0 flex items-center">
               <img
                 src={logoImg}
                 alt="Hamrah Tech Logo"
-                className="h-full w-auto object-contain"
+                className="h-full w-auto object-contain dark:invert transition-all"
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 decoding="async"

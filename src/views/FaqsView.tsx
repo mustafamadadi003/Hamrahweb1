@@ -3,7 +3,7 @@ import { useApp } from '../context/AppContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { Link } from 'react-router-dom';
-import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
+import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
 import { Footer } from '../components/Footer';
 
 // Helper for localizing digits based on language

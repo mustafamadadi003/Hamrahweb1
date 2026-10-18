@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useApp, PageView } from '../context/AppContext';
 import { Language } from '../i18n/translations';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImg from '../assets/logo/hamrah_tech_bw.jpg';
+import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
 
 export const Header: React.FC = () => {
   const { language, setLanguage, theme, toggleTheme, t, isRtl, openConsultationModal, currentPage, setCurrentPage } = useApp();
@@ -68,20 +68,20 @@ export const Header: React.FC = () => {
             className="fixed top-6 left-1/2 z-50 w-[92%] sm:w-auto max-w-[1100px]"
           >
             {/* The Main Pill Bar */}
-            <div className="flex items-center justify-between gap-4 md:gap-8 px-4 sm:px-6 py-3 bg-white/90 dark:bg-[#080E1C]/80 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full shadow-2xl transition-colors duration-300">
+            <div className="flex items-center justify-between gap-2 sm:gap-4 md:gap-6 px-3 sm:px-6 py-2.5 sm:py-3 bg-white/90 dark:bg-[#080E1C]/80 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full shadow-2xl transition-colors duration-300">
               
               {/* Left Zone: Brand Logo Lockup */}
               <button
                 onClick={() => handleNavClick('home')}
-                className="flex items-center gap-2.5 text-left cursor-pointer shrink-0"
+                className="flex items-center gap-2.5 text-left cursor-pointer shrink-0 group"
               >
-                <div className="relative h-8 sm:h-9 w-auto overflow-hidden shrink-0">
+                <div className="relative h-8 sm:h-9 w-auto overflow-hidden shrink-0 flex items-center">
                   <img
                     src={logoImg}
                     alt="Hamrah Tech Logo"
-                    className="h-full w-auto object-contain"
+                    className="h-full w-auto max-h-9 object-contain dark:invert transition-all group-hover:scale-105"
                     referrerPolicy="no-referrer"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                   />
                 </div>
@@ -91,7 +91,7 @@ export const Header: React.FC = () => {
               </button>
 
               {/* Center Zone: Nav Links (Desktop) */}
-              <nav className="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-white/5 border border-slate-200/50 dark:border-white/5 px-2 py-1 rounded-full">
+              <nav className="hidden lg:flex items-center gap-1 bg-slate-100 dark:bg-white/5 border border-slate-200/50 dark:border-white/5 px-2 py-1 rounded-full">
                 {navItems.map((item) => {
                   const isActive = currentPage === item.id;
                   return (
@@ -176,7 +176,7 @@ export const Header: React.FC = () => {
                 {/* Mobile Menu Burger Icon */}
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="md:hidden w-8.5 h-8.5 rounded-full bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white flex items-center justify-center cursor-pointer hover:bg-slate-200 dark:hover:bg-white/20 transition-all"
+                  className="lg:hidden w-8.5 h-8.5 rounded-full bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/10 text-slate-800 dark:text-white flex items-center justify-center cursor-pointer hover:bg-slate-200 dark:hover:bg-white/20 transition-all"
                 >
                   <span className="material-symbols-outlined text-lg">
                     {isMobileMenuOpen ? 'close' : 'menu'}
