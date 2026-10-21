@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useApp, PageView } from '../context/AppContext';
 import { Language } from '../i18n/translations';
 import { motion, AnimatePresence } from 'motion/react';
-import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
+import logoImg from '../assets/logo/hamrah_tech_logo.jpeg';
 
 export const Header: React.FC = () => {
   const { language, setLanguage, theme, toggleTheme, t, isRtl, openConsultationModal, currentPage, setCurrentPage } = useApp();
@@ -75,13 +75,13 @@ export const Header: React.FC = () => {
                 onClick={() => handleNavClick('home')}
                 className="flex items-center gap-2 text-left cursor-pointer shrink-0 group"
               >
-                <div className="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0 flex items-center justify-center">
+                <div className="relative w-8 h-8 sm:w-9 sm:h-9 shrink-0 flex items-center justify-center bg-white rounded-xl p-0.5 shadow-sm overflow-hidden">
                   <img
                     src={logoImg}
                     alt="Hamrah Tech Logo"
                     width={36}
                     height={36}
-                    className="w-full h-full object-contain dark:invert transition-all group-hover:scale-105"
+                    className="w-full h-full object-contain transition-all group-hover:scale-105"
                     referrerPolicy="no-referrer"
                     loading="eager"
                     decoding="async"
@@ -140,7 +140,7 @@ export const Header: React.FC = () => {
                           }}
                           className={`w-full flex items-center justify-between px-3 py-2 text-xs font-bold cursor-pointer transition-colors ${
                             language === lang.code
-                              ? 'bg-[#00F5D4]/10 text-[#00BFA5] dark:text-[#00F5D4]'
+                              ? 'bg-[#00F5D4]/15 text-[#0B1F3A] dark:text-[#00F5D4]'
                               : 'text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                           }`}
                         >
@@ -206,7 +206,7 @@ export const Header: React.FC = () => {
                         onClick={() => handleNavClick(item.id)}
                         className={`w-full text-left py-3 px-4.5 rounded-xl text-xs font-bold transition-all ${
                           isActive
-                            ? 'bg-[#00F5D4]/10 text-[#00BFA5] dark:text-[#00F5D4]'
+                            ? 'bg-[#00F5D4]/15 text-[#0B1F3A] dark:text-[#00F5D4]'
                             : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white'
                         }`}
                       >

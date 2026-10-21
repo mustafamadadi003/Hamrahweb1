@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+  --color-brand-navy: #0B1F3A;
+  --color-brand-cyan: #00F5D4;
   --breakpoint-xs: 30rem;
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;
@@ -47,8 +49,10 @@
   }
 }
 
-/* Light & Dark Theme Colors (Light default) */
+/* Light & Dark Theme Colors */
 :root {
+  --brand-navy: #0B1F3A;
+  --brand-cyan: #00F5D4;
   --bg-main: #F8F9FF;
   --bg-alt: #EBF1F5;
   --bg-card: #FFFFFF;
@@ -56,17 +60,19 @@
   --border-color: #D1DBE5;
   --text-heading: #0B1F3A;
   --text-body: #44474E;
-  --accent-color: #00BFA5;
+  --accent-color: #00F5D4;
   --accent-bright: #00F5D4;
   --primary-btn: #0B1F3A;
-  --primary-btn-text: #FFFFFF;
+  --primary-btn-text: #00F5D4;
 }
 
 .dark {
+  --brand-navy: #0B1F3A;
+  --brand-cyan: #00F5D4;
   --bg-main: #0B1F3A;
-  --bg-alt: #0D2645;
+  --bg-alt: #071527;
   --bg-card: #0B1F3A;
-  --bg-container: #102B4D;
+  --bg-container: #0E2442;
   --border-color: #1A365D;
   --text-heading: #F3F4F6;
   --text-body: #9CA3AF;
@@ -74,6 +80,11 @@
   --accent-bright: #00F5D4;
   --primary-btn: #00F5D4;
   --primary-btn-text: #0B1F3A;
+}
+
+::selection {
+  background-color: #00F5D4;
+  color: #0B1F3A;
 }
 
 /* Scrollbar */

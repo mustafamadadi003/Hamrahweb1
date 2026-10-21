@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
-import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
+import logoImg from '../assets/logo/hamrah_tech_logo.jpeg';
 
 export const Footer: React.FC = () => {
   const { t } = useApp();
@@ -15,11 +15,11 @@ export const Footer: React.FC = () => {
           
           {/* Brand Bio */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0 flex items-center">
+            <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0 flex items-center bg-white rounded-xl p-1.5 shadow-sm inline-block">
               <img
                 src={logoImg}
                 alt="Hamrah Tech Logo"
-                className="h-full w-auto object-contain dark:invert transition-all"
+                className="h-full w-auto object-contain transition-all"
                 referrerPolicy="no-referrer"
                 loading="lazy"
                 decoding="async"
@@ -43,27 +43,27 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-sm text-[#475569] dark:text-[#9CA3AF]">
               <li>
-                <Link to="/" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
+                <Link to="/" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.home}
                 </Link>
               </li>
               <li>
-                <Link to="/about-us" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
+                <Link to="/about-us" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.aboutUs}
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
+                <Link to="/services" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.services}
                 </Link>
               </li>
               <li>
-                <Link to="/faqs" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
+                <Link to="/faqs" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.faqs}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
+                <Link to="/contact" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors cursor-pointer">
                   {t.nav.contact}
                 </Link>
               </li>
@@ -91,19 +91,19 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2.5 text-xs text-[#475569] dark:text-[#9CA3AF]">
               <div className="flex items-start gap-2">
-                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">location_on</span>
+                <span className="material-symbols-outlined text-sm text-[#00F5D4] dark:text-[#00F5D4]">location_on</span>
                 <span>{t.contact.addressVal}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">mail</span>
+                <span className="material-symbols-outlined text-sm text-[#00F5D4] dark:text-[#00F5D4]">mail</span>
                 <span>{t.contact.emailVal}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">call</span>
+                <span className="material-symbols-outlined text-sm text-[#00F5D4] dark:text-[#00F5D4]">call</span>
                 <span>{t.contact.phoneVal}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm text-[#00BFA5] dark:text-[#00F5D4]">schedule</span>
+                <span className="material-symbols-outlined text-sm text-[#00F5D4] dark:text-[#00F5D4]">schedule</span>
                 <span>{t.contact.hoursVal}</span>
               </div>
             </div>
@@ -115,9 +115,9 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#475569] dark:text-[#9CA3AF]">
           <p>© {new Date().getFullYear()} Hamrah Tech. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link to="/faqs" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors">Privacy Policy</Link>
-            <Link to="/faqs" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors">Terms of Service</Link>
-            <Link to="/contact" className="hover:text-[#00BFA5] dark:hover:text-[#00F5D4] transition-colors">24/7 Client Support</Link>
+            <Link to="/faqs" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors">Privacy Policy</Link>
+            <Link to="/faqs" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors">Terms of Service</Link>
+            <Link to="/contact" className="hover:text-[#00F5D4] dark:hover:text-[#00F5D4] transition-colors">24/7 Client Support</Link>
           </div>
         </div>
 

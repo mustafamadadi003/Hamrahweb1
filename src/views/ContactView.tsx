@@ -27,12 +27,12 @@ const localizedContent = {
     successMsg: "✓ Thank you! Our strategy team will contact you within 1 hour.",
     
     col1Title: "Office Address",
-    col1Val: "12 Valiasr Street, Tehran, Iran",
+    col1Val: "Shop No T50, Milli Market, Poll-e-Sorkh, Kabul, Afghanistan",
     col2Title: "24/7 Support",
-    col2Phone: "Call: +98 21 8888 8888",
+    col2Phone: "Call: +93 77 620 4626",
     col2Mail: "Mail: info@hamrahtech.com",
     col3Title: "Business Hours",
-    col3Val: "Saturday - Wednesday, 9 AM - 5 PM",
+    col3Val: "Saturday - Thursday, 8:00 AM - 5:00 PM",
 
     faqEyebrow: "General Ask",
     faqTitle: "Frequently Asked Questions",
@@ -75,7 +75,7 @@ const localizedContent = {
       },
       {
         id: "08",
-        q: "Do you work with international clients outside of Iran?",
+        q: "Do you work with international clients outside of Afghanistan?",
         a: "Yes. Hamrah Tech works with startups and SMEs across the Middle East, South Asia, and North America. Our workflow is fully remote and optimized for asynchronous communication across timezones."
       }
     ]
@@ -95,12 +95,12 @@ const localizedContent = {
     successMsg: "✓ تشکر! تیم استراتژی ما ظرف ۱ ساعت با شما تماس خواهد گرفت.",
     
     col1Title: "آدرس دفتر مرکزی",
-    col1Val: "تهران، خیابان ولیعصر، پلاک ۱۲",
+    col1Val: "کابل، پل سرخ، ملی مارکیت، دکان نمبر T50، افغانستان",
     col2Title: "پشتیبانی ۲۴ ساعته",
-    col2Phone: "تلفن: +۹۸ ۲۱ ۸۸۸۸ ۸۸۸۸",
+    col2Phone: "تلفن: +۹۳ ۷۷ ۶۲۰ ۴۶۲۶",
     col2Mail: "ایمیل: info@hamrahtech.com",
     col3Title: "ساعات کاری رسمی",
-    col3Val: "شنبه تا چهارشنبه، ۹ صبح تا ۵ عصر",
+    col3Val: "شنبه تا پنجشنبه، ۸:۰۰ صبح تا ۵:۰۰ عصر",
 
     faqEyebrow: "پرسش‌های عمومی",
     faqTitle: "پاسخ به متداول‌ترین سوالات شما",
@@ -143,7 +143,7 @@ const localizedContent = {
       },
       {
         id: "۰۸",
-        q: "آیا با مشتریان بین‌المللی خارج از کشور نیز کار می‌کنید؟",
+        q: "آیا با مشتریان بین‌المللی خارج از افغانستان نیز کار می‌کنید؟",
         a: "بله، همراه تک تجربه موفقی در همکاری با استارتاپ‌ها و شرکت‌های کوچک و متوسط در سراسر خاورمیانه، جنوب آسیا و آمریکای شمالی دارد. فرآیندهای کاری ما برای هماهنگی با ریجن‌های زمانی مختلف کاملاً بهینه شده است."
       }
     ]
@@ -163,12 +163,12 @@ const localizedContent = {
     successMsg: "✓ مننه! زموږ د ستراتیژۍ ټیم به په ۱ ساعت کې له تاسو سره اړیکه ونیسي.",
     
     col1Title: "د دفتر پته",
-    col1Val: "تهران، ولیعصر واټ، ۱۲ پلاک",
+    col1Val: "کابل، پل سرخ، ملي مارکېټ، T50 نمبر دوکان، افغانستان",
     col2Title: "۲۴/۷ ملاتړ",
-    col2Phone: "تلیفون: +۹۸ ۲۱ ۸۸۸۸ ۸۸۸۸",
+    col2Phone: "تلیفون: +۹۳ ۷۷ ۶۲۰ ۴۶۲۶",
     col2Mail: "ایمیل: info@hamrahtech.com",
     col3Title: "د کار ساعتونه",
-    col3Val: "شنبه تر چهارشنبه، ۹ د سهار تر ۵ د ماښام",
+    col3Val: "شنبه تر پنجشنبې، ۸:۰۰ سهار تر ۵:۰۰ مازیګر",
 
     faqEyebrow: "عمومي پوښتنې",
     faqTitle: "ستاسو د ډېرو پوښتنو ځوابونه دلته موندلی شئ",

@@ -42,7 +42,7 @@ const WebIcon3D: React.FC = () => (
 );
 
 const SeoIcon3D: React.FC = () => (
-  <svg className="w-14 h-14 text-indigo-400 drop-shadow-[0_0_15px_rgba(129,140,248,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <svg className="w-14 h-14 text-[#00F5D4] drop-shadow-[0_0_15px_rgba(0,245,212,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
     <path d="M8 40V24M20 40V14M32 40V18M44 40V8" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M8 24L20 14L32 18L44 8" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
     <circle cx="44" cy="8" r="3" fill="currentColor" className="animate-ping" />
@@ -51,7 +51,7 @@ const SeoIcon3D: React.FC = () => (
 );
 
 const AdsIcon3D: React.FC = () => (
-  <svg className="w-14 h-14 text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <svg className="w-14 h-14 text-[#00F5D4] drop-shadow-[0_0_15px_rgba(0,245,212,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
     <circle cx="24" cy="24" r="18" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="24" cy="24" r="12" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="24" cy="24" r="6" strokeLinecap="round" strokeLinejoin="round" />
@@ -60,7 +60,7 @@ const AdsIcon3D: React.FC = () => (
 );
 
 const SocialIcon3D: React.FC = () => (
-  <svg className="w-14 h-14 text-blue-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <svg className="w-14 h-14 text-[#00F5D4] drop-shadow-[0_0_15px_rgba(0,245,212,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
     <circle cx="24" cy="24" r="7" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="10" cy="12" r="4" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="38" cy="12" r="4" strokeLinecap="round" strokeLinejoin="round" />
@@ -71,7 +71,7 @@ const SocialIcon3D: React.FC = () => (
 );
 
 const ProductionIcon3D: React.FC = () => (
-  <svg className="w-14 h-14 text-sky-500 drop-shadow-[0_0_15px_rgba(14,165,233,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <svg className="w-14 h-14 text-[#00F5D4] drop-shadow-[0_0_15px_rgba(0,245,212,0.4)]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
     <path d="M8 10H40V34H8V10Z" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M14 10V34M24 10V34M34 10V34" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="3 3" />
     <path d="M8 18H40M8 26H40" strokeLinecap="round" strokeLinejoin="round" />

@@ -5,7 +5,7 @@ import { AnimatedCounter, formatLocalizedNumber } from '../components/AnimatedCo
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'motion/react';
 
 // Local Image Imports
-import logoImg from '../assets/logo/Hamrah_Tech_transparent.png';
+import logoImg from '../assets/logo/hamrah_tech_logo.jpeg';
 import founderImg from '../assets/images/founder.jpg';
 import techLeadImg from '../assets/images/tech_lead.jpg';
 import growthLeadImg from '../assets/images/growth_lead.jpg';
@@ -718,7 +718,7 @@ export const HomeView: React.FC = () => {
 
                     {/* Paragraph with the first words in bold */}
                     <p className="text-[#44474E] dark:text-slate-300 leading-relaxed text-sm sm:text-base mb-8">
-                      <span className="font-extrabold text-[#00BFA5] dark:text-[#00F5D4]">{currentService.desc.split(' ').slice(0, 4).join(' ')} </span>
+                      <span className="font-extrabold text-[#0B1F3A] dark:text-[#00F5D4]">{currentService.desc.split(' ').slice(0, 4).join(' ')} </span>
                       {currentService.desc.split(' ').slice(4).join(' ')}
                     </p>
 
@@ -934,10 +934,10 @@ export const HomeView: React.FC = () => {
       <section className="relative w-full py-12 bg-[#F8F9FF] dark:bg-[#0B1F3A] border-y border-[#DCE9FF] dark:border-white/5">
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 items-stretch text-center">
           {[
-            { value: 390, suffix: '+', label: 'Delivered projects' },
-            { value: 70, suffix: '%', label: 'Returning clients' },
-            { value: 90, suffix: '%', label: 'Success rate' },
-            { value: 6, suffix: '+', label: 'Years of experience' },
+            { value: 390, suffix: '+', label: t.stats.p1Label },
+            { value: 70, suffix: '%', label: t.stats.p2Label },
+            { value: 90, suffix: '%', label: t.stats.p3Label },
+            { value: 2, suffix: '+', label: t.stats.p4Label },
           ].map((stat, i) => (
             <div
               key={i}
@@ -1064,8 +1064,8 @@ export const HomeView: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-16">
             <div className="lg:col-span-7 text-left">
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]" />
-                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#8B5CF6]">
+                <span className="w-2 h-2 rounded-full bg-[#00F5D4] shadow-[0_0_8px_#00F5D4]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#00F5D4] dark:text-[#00F5D4]">
                   {t.teamCarousel.badge}
                 </span>
               </div>
@@ -1086,7 +1086,7 @@ export const HomeView: React.FC = () => {
                   style={{ clipPath: teamClipPathValue }}
                 >
                   {teamTitle.normal}
-                  <span className="bg-gradient-to-r from-violet-500 to-indigo-500 bg-clip-text text-transparent">
+                  <span className="text-[#00F5D4]">
                     {teamTitle.highlight}
                   </span>
                 </motion.span>
@@ -1115,20 +1115,20 @@ export const HomeView: React.FC = () => {
               {/* Desktop Vertically Centered Arrow Buttons (Centered outside the stage) */}
               <button
                 onClick={handlePrevTeam}
-                className="absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
+                className="absolute -left-16 lg:-left-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:border-[#00F5D4] hover:text-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg group"
                 aria-label="Previous Team Member"
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white group-hover:text-[#00F5D4] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
 
               <button
                 onClick={handleNextTeam}
-                className="absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg"
+                className="absolute -right-16 lg:-right-24 top-1/2 -translate-y-1/2 z-40 hidden sm:flex w-12 h-12 bg-[#0B1F3A] dark:bg-zinc-950 text-white rounded-full border border-white/10 items-center justify-center hover:scale-110 active:scale-95 transition-all hover:border-[#00F5D4] hover:text-[#00F5D4] hover:bg-[#172B52] dark:hover:bg-zinc-800 cursor-pointer shadow-lg group"
                 aria-label="Next Team Member"
               >
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white group-hover:text-[#00F5D4] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -1215,7 +1215,7 @@ export const HomeView: React.FC = () => {
                     {/* High quality vignette background overlay to ensure text contrast */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
 
-                    {/* Dark glass gradient info panel (Fades and slides up slightly when active) */}
+                    {/* Dark glass gradient info panel with Brand Colors */}
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{
@@ -1226,14 +1226,17 @@ export const HomeView: React.FC = () => {
                         duration: 0.3,
                         delay: isActive ? 0.3 : 0,
                       }}
-                      className="absolute bottom-4 left-4 right-4 p-5 rounded-2xl bg-black/60 border border-white/10 backdrop-blur-md shadow-xl z-20 text-left"
+                      className="absolute bottom-4 left-4 right-4 p-5 rounded-2xl bg-[#0B1F3A]/90 border border-[#00F5D4]/30 backdrop-blur-md shadow-2xl z-20 text-left"
                     >
-                      <h3 className="text-lg sm:text-[22px] font-extrabold text-white leading-tight">
+                      <h3 className="text-lg sm:text-[22px] font-extrabold text-white leading-tight group-hover:text-[#00F5D4] transition-colors">
                         {member.name}
                       </h3>
-                      <p className="text-[12px] text-zinc-400 mt-1">
-                        {member.role}
-                      </p>
+                      <div className="flex items-center gap-2 mt-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00F5D4] shadow-[0_0_6px_#00F5D4]" />
+                        <p className="text-xs font-bold uppercase tracking-wider text-[#00F5D4]">
+                          {member.role}
+                        </p>
+                      </div>
                     </motion.div>
                   </motion.div>
                 );
@@ -1274,8 +1277,8 @@ export const HomeView: React.FC = () => {
                     onClick={() => setActiveTeamIndex(dotIdx)}
                     className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                       isDotActive 
-                        ? 'w-6 bg-white' 
-                        : 'w-2 bg-zinc-600 hover:bg-zinc-400'
+                        ? 'w-8 bg-[#00F5D4] shadow-[0_0_10px_#00F5D4]' 
+                        : 'w-2 bg-slate-400/40 dark:bg-white/20 hover:bg-[#00F5D4]/50'
                     }`}
                     aria-label={`Go to slide ${dotIdx + 1}`}
                   />
@@ -1294,15 +1297,15 @@ export const HomeView: React.FC = () => {
           
           {/* Left bottom area: Floating rounded-2xl dark contact card (overlapping/standing out) */}
           <div id="contact" className="lg:col-span-5 bg-white dark:bg-[#0B1F3A] border border-[#DCE9FF] dark:border-white/10 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
-            <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] text-emerald-400 font-extrabold flex items-center gap-1.5 shadow-md">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/30 text-[10px] text-[#00F5D4] font-extrabold flex items-center gap-1.5 shadow-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00F5D4] animate-pulse" />
               <span>Response time: 1 hour</span>
             </div>
 
             <h3 className="text-2xl font-extrabold text-[#0B1F3A] dark:text-white mt-2 mb-6">Tell details about your project</h3>
 
             {leadSubmitted ? (
-              <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold text-center">
+              <div className="p-6 rounded-2xl bg-[#00F5D4]/10 border border-[#00F5D4]/20 text-[#00F5D4] text-sm font-bold text-center">
                 ✓ Thank you! Our strategy team will contact you within 1 hour.
               </div>
             ) : (
@@ -1369,8 +1372,8 @@ export const HomeView: React.FC = () => {
           {/* Right Column: FAQ Accordion list */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
-              <span className="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00F5D4] shadow-[0_0_8px_#00F5D4]" />
+              <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#00F5D4] dark:text-[#00F5D4]">
                 {t.faqs.badge}
               </span>
             </div>
@@ -1379,9 +1382,9 @@ export const HomeView: React.FC = () => {
               Learn more from FAQs
             </h2>
 
-            {/* Category tabs with underlined orange active state */}
+            {/* Category tabs with brand active state */}
             <div className="flex border-b border-[#DCE9FF] dark:border-white/10 w-full mb-8">
-              <button className="px-4 py-2.5 text-xs font-bold text-[#0B1F3A] dark:text-white uppercase tracking-widest border-b-2 border-[#0B1F3A] transition-all cursor-pointer">
+              <button className="px-4 py-2.5 text-xs font-bold text-[#0B1F3A] dark:text-white uppercase tracking-widest border-b-2 border-[#00F5D4] transition-all cursor-pointer">
                 General Ask
               </button>
             </div>
@@ -1447,11 +1450,11 @@ export const HomeView: React.FC = () => {
             
             {/* Brand Block */}
             <div className="lg:col-span-5 space-y-4 text-left">
-              <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0 flex items-center">
+              <div className="relative h-10 sm:h-12 w-auto overflow-hidden shrink-0 flex items-center bg-white rounded-xl p-1.5 shadow-sm inline-block">
                 <img
                   src={logoImg}
                   alt="Hamrah Tech Logo"
-                  className="h-full w-auto object-contain dark:invert transition-all"
+                  className="h-full w-auto object-contain transition-all"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
@@ -1511,7 +1514,7 @@ export const HomeView: React.FC = () => {
           {/* Middle Info Row with circular dark icon badges */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-8 border-b border-slate-100 dark:border-white/5 text-xs text-slate-500 dark:text-slate-400 font-semibold text-left">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00BFA5] dark:text-[#00F5D4]">
+              <div className="w-10 h-10 rounded-full bg-[#0B1F3A]/10 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00F5D4]">
                 <span className="material-symbols-outlined text-sm">location_on</span>
               </div>
               <div>
@@ -1521,7 +1524,7 @@ export const HomeView: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00BFA5] dark:text-[#00F5D4]">
+              <div className="w-10 h-10 rounded-full bg-[#0B1F3A]/10 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00F5D4]">
                 <span className="material-symbols-outlined text-sm">support_agent</span>
               </div>
               <div>
@@ -1531,7 +1534,7 @@ export const HomeView: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00BFA5] dark:text-[#00F5D4]">
+              <div className="w-10 h-10 rounded-full bg-[#0B1F3A]/10 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#00F5D4]">
                 <span className="material-symbols-outlined text-sm">schedule</span>
               </div>
               <div>

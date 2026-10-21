@@ -86,8 +86,7 @@ export const AboutView: React.FC = () => {
     { year: '2018', title: language === 'prs' ? 'ورود به بازار کار' : language === 'pus' ? 'مارکیټ ته ننوتل' : 'Arriving in the Market', desc: language === 'prs' ? 'شروع به عنوان متخصصین زیرساخت دیجیتال و شناسایی نیازهای اصلی بازار.' : language === 'pus' ? 'د ډیجیټل بنسټیزو کارونو پیلول او د بازار د اړتیاوو پېژندل.' : 'Starting as specialized digital infrastructure technicians, identifying core technological gaps in emerging regional markets.' },
     { year: '2021', title: language === 'prs' ? 'راه‌اندازی اولین کسب‌وکار' : language === 'pus' ? 'لومړۍ سوداګري پیلول' : 'First Business Launched', desc: language === 'prs' ? 'ایجاد سیستم مشاوره‌ای و تحویل موفقیت‌آمیز اولین پلتفرم‌های شرکتی.' : language === 'pus' ? 'د مشورې سیسټم جوړول او د لومړنیو ۵۰ شرکتونو لپاره د پلتفارمونو سپارل.' : 'Establishing the foundational consultation framework, successfully delivering the first 50 enterprise client platforms.' },
     { year: '2022', title: language === 'prs' ? 'درک دیجیتال مارکتینگ' : language === 'pus' ? 'د ډیجیټل مارکیټینګ درک' : 'The Digital Marketing Realization', desc: language === 'prs' ? 'تلفیق سئو پربازده و تبلیغات هدفمند با مهندسی نرم‌افزار پیشرفته.' : language === 'pus' ? 'د SEO او مؤثرو اعلاناتو یوځای کول د پرمختللې سافټویر مهندسۍ سره.' : 'Integrating high-converting search optimization and Meta/Google performance ads with elite software development.' },
-    { year: '2022', title: language === 'prs' ? 'شکل‌گیری تیم اصلی' : language === 'pus' ? 'د اصلي ټیم جوړېدل' : 'The Team Comes Together', desc: language === 'prs' ? 'جذب معماران برتر نرم‌افزار و طراحان خلاق برای ارائه بهترین کیفیت.' : language === 'pus' ? 'د غوره سافټویر معمارانو او نوښتګرو ډیزاینرانو راټولول.' : 'Recruiting top-tier software architects and creative directors, forming a unified powerhouse of engineering and design.' },
-    { year: language === 'prs' ? 'امروز' : language === 'pus' ? 'نن ورځ' : 'Today', title: language === 'prs' ? 'تولد همراه تک' : language === 'pus' ? 'د همراه تک زیږیدنه' : 'Hamrah Tech Is Born', desc: language === 'prs' ? 'فعالیت به عنوان آژانس پیشرو در ارائه راهکارهای دیجیتال با بالاترین سرعت و بازدهی.' : language === 'pus' ? 'د لوړ سرعت او مؤثرو ډیجیټل خدماتو مخکښ اژانس.' : 'Operating as a premier full-service digital agency powering modern brands with sub-second performance and verified ROI.' },
+    { year: '2024', title: language === 'prs' ? 'تاسیس رسمی همراه تک (۲۰۲۴)' : language === 'pus' ? 'د همراه تک رسمي بنسټ (۲۰۲۴)' : 'Hamrah Tech Founded (2024)', desc: language === 'prs' ? 'آغاز رسمی فعالیت همراه تک در سال ۲۰۲۴ با تیمی متخصص در مهندسی نرم‌افزار، سئو و بازاریابی داده‌محور.' : language === 'pus' ? 'په ۲۰۲۴ کې د همراه تک رسمي پیل، د مسلکي سافټویر او ډیجیټل مارکیټینګ خدمتونو وړاندې کول.' : 'Official establishment of Hamrah Tech in 2024, uniting specialized software engineering and performance digital marketing.' },
   ];
 
   const SectionDivider = () => (
@@ -419,8 +418,8 @@ export const AboutView: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-16">
             <div className="lg:col-span-7 text-left">
               <div className="flex items-center gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]" />
-                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#8B5CF6]">
+                <span className="w-2 h-2 rounded-full bg-[#00F5D4] shadow-[0_0_8px_#00F5D4]" />
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#00F5D4] dark:text-[#00F5D4]">
                   {t.teamCarousel.badge}
                 </span>
               </div>
@@ -578,7 +577,7 @@ export const AboutView: React.FC = () => {
                 </div>
                 <div className="mt-4 pt-2 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-[10px] text-slate-500">
                   <span>Verified User</span>
-                  <span className="text-[#00BFA5] dark:text-[#00F5D4]">Read more</span>
+                  <span className="text-[#0B1F3A] dark:text-[#00F5D4] font-semibold hover:text-[#00F5D4] transition-colors">Read more</span>
                 </div>
               </div>
             ))}
