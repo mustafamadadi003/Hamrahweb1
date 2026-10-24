@@ -1,0 +1,320 @@
+================================================================================
+          راهنمای خط به خط پیاده‌سازی احراز هویت در فرانت‌اند (React + TypeScript)
+================================================================================
+
+این سند شامل ساختار کامل پوشه‌ها و فایل‌های پیاده‌سازی سیستم ورود، ثبت‌نام و صفحات 
+محافظت‌شده در ری‌اکت (React) متصل به لاراول می‌باشد.
+
+--------------------------------------------------------------------------------
+۱. ساختار پوشه‌ها در فرانت‌اند (Folder Structure)
+--------------------------------------------------------------------------------
+src/
+ ├── api/
+ │    └── axios.ts              # تنظمیات کلاینت Axios و اینترسپتورها
+ ├── context/
+ │    └── AuthContext.tsx       # مدیریت وضعیت جهانی کاربر و توکن
+ ├── components/
+ │    └── ProtectedRoute.tsx    # محافظت از مسیرهای خصوصی
+ └── pages/
+      ├── LoginPage.tsx         # صفحه ورود
+      ├── RegisterPage.tsx      # صفحه ثبت‌نام
+      └── DashboardPage.tsx     # صفحه دشبورد کاربر (محافظت‌شده)
+
+
+--------------------------------------------------------------------------------
+۲. گام ۱: ساخت کلاینت API با Axios
+فایل: src/api/axios.ts
+--------------------------------------------------------------------------------
+import axios from 'axios';
+
+// ساخت نمونه Axios با آدرس بک‌اند لاراول
+const api = axios.create({
+  baseURL: 'http://localhost:8000/api', // آدرس API لاراول
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  },
+});
+
+// اینترسپتور ۱: تزریق خودکار توکن به تمام درخواست‌های خروجی
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('auth_token');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// اینترسپتور ۲: مدیریت خطاهای ۴۰۱ (انقضای توکن)
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      localStorage.removeItem('auth_token');
+      window.location.href = '/login'; // هدایت خودکار به لاگین در صورت منقضی شدن توکن
+    }
+    return Promise.reject(error);
+  }
+);
+
+export default api;
+
+
+--------------------------------------------------------------------------------
+۳. گام ۲: ساخت AuthContext (مدیریت وضعیت کاربر در کل برنامه)
+فایل: src/context/AuthContext.tsx
+--------------------------------------------------------------------------------
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import api from '../api/axios';
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+interface AuthContextType {
+  user: User | null;
+  token: string | null;
+  isAuthenticated: boolean;
+  loading: boolean;
+  login: (email: string, pass: string) => Promise<void>;
+  register: (name: string, email: string, pass: string, passConfirm: string) => Promise<void>;
+  logout: () => Promise<void>;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [token, setToken] = useState<string | null>(localStorage.getItem('auth_token'));
+  const [loading, setLoading] = useState<boolean>(true);
+
+  // در اولین بارگذاری برنامه، صحت توکن بررسی می‌شود
+  useEffect(() => {
+    const checkAuthStatus = async () => {
+      if (token) {
+        try {
+          const res = await api.get('/user');
+          setUser(res.data.user);
+        } catch (err) {
+          console.error('توکن نامعتبر است');
+          localStorage.removeItem('auth_token');
+          setToken(null);
+          setUser(null);
+        }
+      }
+      setLoading(false);
+    };
+
+    checkAuthStatus();
+  }, [token]);
+
+  // متد ورود
+  const login = async (email: string, password: string) => {
+    const res = await api.post('/login', { email, password });
+    const { token: newToken, user: userData } = res.data;
+
+    localStorage.setItem('auth_token', newToken);
+    setToken(newToken);
+    setUser(userData);
+  };
+
+  // متد ثبت نام
+  const register = async (name: string, email: string, password: string, password_confirmation: string) => {
+    const res = await api.post('/register', { name, email, password, password_confirmation });
+    const { token: newToken, user: userData } = res.data;
+
+    localStorage.setItem('auth_token', newToken);
+    setToken(newToken);
+    setUser(userData);
+  };
+
+  // متد خروج
+  const logout = async () => {
+    try {
+      await api.post('/logout');
+    } catch (e) {
+      console.error(e);
+    } finally {
+      localStorage.removeItem('auth_token');
+      setToken(null);
+      setUser(null);
+    }
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        token,
+        isAuthenticated: !!user,
+        loading,
+        login,
+        register,
+        logout,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) throw new Error('useAuth باید داخل AuthProvider استفاده شود');
+  return context;
+};
+
+
+--------------------------------------------------------------------------------
+۴. گام ۳: کامپوننت محافظت از مسیرها (ProtectedRoute)
+فایل: src/components/ProtectedRoute.tsx
+--------------------------------------------------------------------------------
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+export const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { isAuthenticated, loading } = useAuth();
+
+  if (loading) {
+    return <div>در حال بررسی دسترسی...</div>;
+  }
+
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return <>{children}</>;
+};
+
+
+--------------------------------------------------------------------------------
+۵. گام ۴: صفحه لاگین (LoginPage.tsx)
+فایل: src/pages/LoginPage.tsx
+--------------------------------------------------------------------------------
+import React, { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
+export const LoginPage: React.FC = () => {
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setIsSubmitting(true);
+
+    try {
+      await login(email, password);
+      navigate('/dashboard'); // هدایت به دشبورد بعد از لاگین
+    } catch (err: any) {
+      setError(err.response?.data?.message || 'خطا در ورود به حساب کاربری');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="login-container">
+      <h2>ورود به حساب کاربری</h2>
+      {error && <p className="error-message">{error}</p>}
+      
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>ایمیل:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <label>رمز عبور:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'در حال ورود...' : 'ورود'}
+        </button>
+      </form>
+    </div>
+  );
+};
+
+
+--------------------------------------------------------------------------------
+۶. گام ۵: صفحه دشبورد کاربر (DashboardPage.tsx)
+فایل: src/pages/DashboardPage.tsx
+--------------------------------------------------------------------------------
+import React from 'react';
+import { useAuth } from '../context/AuthContext';
+
+export const DashboardPage: React.FC = () => {
+  const { user, logout } = useAuth();
+
+  return (
+    <div className="dashboard-container">
+      <h1>دشبورد کاربر</h1>
+      <p>خوش آمدید، <strong>{user?.name}</strong>!</p>
+      <p>ایمیل شما: {user?.email}</p>
+
+      <button onClick={logout}>خروج از حساب</button>
+    </div>
+  );
+};
+
+
+--------------------------------------------------------------------------------
+۷. گام ۶: اتصال مسیرها در App.tsx
+فایل: src/App.tsx
+--------------------------------------------------------------------------------
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import { LoginPage } from './pages/LoginPage';
+import { RegisterPage } from './pages/RegisterPage';
+import { DashboardPage } from './pages/DashboardPage';
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>
+          {/* مسیرهای عمومی */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+
+          {/* مسیرهای محافظت‌شده */}
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <DashboardPage />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
+  );
+}
+================================================================================

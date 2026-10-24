@@ -1,0 +1,356 @@
+================================================================================
+           راهنمای جامع پیاده‌سازی و تطبیق احراز هویت React و Laravel
+================================================================================
+
+این سند شامل معماری، نحوه ارتباط، کدهای نمونه لاراول (Backend) و ری‌اکت (Frontend) 
+و نکات امنیتی برای پیاده‌سازی سیستم احراز هویت (Authentication) بین React و Laravel می‌باشد.
+
+--------------------------------------------------------------------------------
+۱. معماری کلان (Architecture Overview)
+--------------------------------------------------------------------------------
+برای احراز هویت بین React (SPA) و Laravel دو روش اصلی وجود دارد:
+
+روش الف) Laravel Sanctum با Bearer Token (مناسب برای Mobile & SPA API):
+  - کاربر فرم ورود را در React پر می‌کند.
+  - درخواست POST به `/api/login` لاراول ارسال می‌شود.
+  - لاراول نام کاربری و رمز را بررسی کرده و یک Token صادر می‌کند.
+  - React توکن را ذخیره کرده و در هدر درخواست‌های بعدی به صورت `Authorization: Bearer <TOKEN>` می‌فرستد.
+
+روش ب) Laravel Sanctum SPA با Cookie / CSRF Protection (توصیه‌شده برای امنیت بالاتر در وب):
+  - ابتدا درخواست GET به `/sanctum/csrf-cookie` برای دریافت کوکی CSRF فرستاده می‌شود.
+  - درخواست POST به `/login` یا `/api/login` فرستاده شده و کوکی جلسه (Session/HttpOnly) ست می‌شود.
+
+در ادامه کد کامل روش Bearer Token (پرکاربردترین روش برای React SPA) ارائه می‌شود.
+
+
+--------------------------------------------------------------------------------
+۲. بخش لاراول (Laravel Backend Setup)
+--------------------------------------------------------------------------------
+
+الف) نصب لاراول سانکتوم (در صورتی که نصب نیست):
+  composer require laravel/sanctum
+  php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+  php artisan migrate
+
+ب) فایل routes/api.php:
+--------------------------------------------------
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
+
+// مسیرهای عمومی
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+// مسیرهای حفاظت‌شده با Sanctum
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', [AuthController::class, 'user']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+});
+
+
+ج) کنترلر احراز هویت: app/Http/Controllers/Api/AuthController.php
+--------------------------------------------------
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
+class AuthController extends Controller
+{
+    // ۱. ثبت نام کاربر
+    public function register(Request $request)
+    {
+        $fields = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = User::create([
+            'name' => $fields['name'],
+            'email' => $fields['email'],
+            'password' => Hash::make($fields['password']),
+        ]);
+
+        $token = $user->createToken('react_auth_token')->plainTextToken;
+
+        return response()->json([
+            'message' => 'کاربر با موفقیت ثبت شد',
+            'user' => $user,
+            'token' => $token,
+        ], 201);
+    }
+
+    // ۲. ورود کاربر
+    public function login(Request $request)
+    {
+        $fields = $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+
+        $user = User::where('email', $fields['email'])->first();
+
+        if (!$user || !Hash::check($fields['password'], $user->password)) {
+            return response()->json([
+                'message' => 'اطلاعات ورود نامعتبر می‌باشد.'
+            ], 401);
+        }
+
+        // حذف توکن‌های قبلی در صورت نیاز
+        $user->tokens()->delete();
+
+        // ایجاد توکن جدید
+        $token = $user->createToken('react_auth_token')->plainTextToken;
+
+        return response()->json([
+            'message' => 'ورود با موفقیت انجام شد',
+            'user' => $user,
+            'token' => $token,
+        ], 200);
+    }
+
+    // ۳. دریافت اطلاعات کاربر جاری
+    public function user(Request $request)
+    {
+        return response()->json([
+            'user' => $request->user()
+        ]);
+    }
+
+    // ۴. خروج کاربر
+    public function logout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'message' => 'با موفقیت خارج شدید'
+        ]);
+    }
+}
+
+
+د) تنظیمات CORS در لاراول: config/cors.php
+--------------------------------------------------
+return [
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'allowed_methods' => ['*'],
+    'allowed_origins' => ['http://localhost:3000', 'http://localhost:5173'], // آدرس ری‌اکت
+    'allowed_origins_patterns' => [],
+    'allowed_headers' => ['*'],
+    'exposed_headers' => [],
+    'max_age' => 0,
+    'supports_credentials' => true,
+];
+
+
+--------------------------------------------------------------------------------
+۳. بخش ری‌اکت (React Frontend Setup)
+--------------------------------------------------------------------------------
+
+الف) تنظیم کلاینت Axios: src/api/axios.ts
+--------------------------------------------------
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'http://localhost:8000/api', // آدرس لاراول
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  },
+});
+
+// اینترسپتور جهت تزریق توکن به تمام درخواست‌ها
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('auth_token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
+
+// اینترسپتور جهت مدیریت خطای ۴۰۱ (انقضای توکن)
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      localStorage.removeItem('auth_token');
+      // به مدیریت مسیر یا ریدایرکت ورود هدایت شود
+    }
+    return Promise.reject(error);
+  }
+);
+
+export default api;
+
+
+ب) کانتکست احراز هویت: src/context/AuthContext.tsx
+--------------------------------------------------
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import api from '../api/axios';
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+interface AuthContextType {
+  user: User | null;
+  token: string | null;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [token, setToken] = useState<string | null>(localStorage.getItem('auth_token'));
+  const [loading, setLoading] = useState<boolean>(true);
+
+  // چک کردن اعتبار توکن در اولین لود برنامه
+  useEffect(() => {
+    const fetchUser = async () => {
+      if (token) {
+        try {
+          const res = await api.get('/user');
+          setUser(res.data.user);
+        } catch (err) {
+          console.error('Token expired or invalid');
+          localStorage.removeItem('auth_token');
+          setToken(null);
+          setUser(null);
+        }
+      }
+      setLoading(false);
+    };
+
+    fetchUser();
+  }, [token]);
+
+  const login = async (email: string, password: string) => {
+    const res = await api.post('/login', { email, password });
+    const newToken = res.data.token;
+    const userData = res.data.user;
+
+    localStorage.setItem('auth_token', newToken);
+    setToken(newToken);
+    setUser(userData);
+  };
+
+  const logout = async () => {
+    try {
+      await api.post('/logout');
+    } catch (e) {
+      console.error(e);
+    } finally {
+      localStorage.removeItem('auth_token');
+      setToken(null);
+      setUser(null);
+    }
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, token, loading, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) throw new Error('useAuth must be used within AuthProvider');
+  return context;
+};
+
+
+ج) فرم ورود در ری‌اکت: src/components/LoginForm.tsx
+--------------------------------------------------
+import React, { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+
+export const LoginForm: React.FC = () => {
+  const { login } = useAuth();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setSubmitting(true);
+
+    try {
+      await login(email, password);
+      alert('ورود با موفقیت انجام شد!');
+    } catch (err: any) {
+      setError(err.response?.data?.message || 'خطا در برقراری ارتباط');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: 'auto', padding: '20px' }}>
+      <h2>ورود به حساب کاربری</h2>
+      {error && <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
+      
+      <div style={{ marginBottom: '15px' }}>
+        <label>ایمیل:</label>
+        <input 
+          type="email" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          required 
+          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+        />
+      </div>
+
+      <div style={{ marginBottom: '15px' }}>
+        <label>رمز عبور:</label>
+        <input 
+          type="password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          required 
+          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+        />
+      </div>
+
+      <button type="submit" disabled={submitting} style={{ width: '100%', padding: '10px' }}>
+        {submitting ? 'در حال ورود...' : 'ورود'}
+      </button>
+    </form>
+  );
+};
+
+
+--------------------------------------------------------------------------------
+۴. نکات امنیتی و جمع‌بندی (Security Best Practices)
+--------------------------------------------------------------------------------
+۱. CORS & Domain Validation:
+   در فایل `config/cors.php` لاراول حتما دامنه دقیقی که ری‌اکت روی آن اجرا می‌شود را ست کنید.
+
+۲. ذخیره‌سازی توکن:
+   ذخیره‌سازی توکن در `localStorage` ساده است اما در برابر XSS حساس می‌باشد.
+   برای امنیت حداکثری وب، استفاده از کوکی‌های `HttpOnly` با `Sanctum SPA Cookie Authentication` توصیه می‌شود.
+
+۳. مدیریت خطاهای شبکه:
+   در اینترسپتور Axios، حتما کد وضعیت ۴۰۱ را لیسن کنید تا در صورت منقضی شدن توکن، کاربر به صفحه لاگین هدایت شود.
+
+۴. Validate داده‌ها:
+   اعتبارسنجی را هم در سمت فرانت‌اند (ورودی‌های کاربر) و هم در سمت بک‌اند لاراول (با FormRequest یا $request->validate) انجام دهید.
+================================================================================
